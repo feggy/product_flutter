@@ -3,5 +3,20 @@
     "counterAppBarTitle": "Counter",
     "@counterAppBarTitle": {
         "description": "Text shown in the AppBar of the Counter Page"
+    },
+    "productPrice": "{amount}",
+    "@productPrice": {
+        "placeholders": {
+            "amount": {
+                "type": "double",
+                "format": "currency",
+                "optionalParameters": {
+                    "decimalDigits": 2,
+                    "name": "USD",
+                    "symbol": "$",
+                    "customPattern": "¤#0.00"
+                }
+            }
+        }
     }
 }

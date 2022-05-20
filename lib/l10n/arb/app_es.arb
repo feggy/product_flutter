@@ -3,5 +3,20 @@
     "counterAppBarTitle": "Contador",
     "@counterAppBarTitle": {
         "description": "Texto mostrado en la AppBar de la página del contador"
+    },
+    "productPrice": "{amount}",
+    "@productPrice": {
+        "placeholders": {
+            "amount": {
+                "type": "double",
+                "format": "currency",
+                "optionalParameters": {
+                    "decimalDigits": 2,
+                    "name": "USD",
+                    "symbol": "$",
+                    "customPattern": "¤#0.00"
+                }
+            }
+        }
     }
 }
