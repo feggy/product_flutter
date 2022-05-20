@@ -9,5 +9,5 @@ import 'package:test_lime_commerce/app/app.dart';
 import 'package:test_lime_commerce/bootstrap.dart';
 
 void main() {
-  bootstrap(() => const App());
+  bootstrap(() => const App(), 'production');
 }

@@ -10,6 +10,7 @@ import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/widgets.dart';
+import 'package:test_lime_commerce/injector.dart';
 
 class AppBlocObserver extends BlocObserver {
   @override
@@ -25,7 +26,13 @@ class AppBlocObserver extends BlocObserver {
   }
 }
 
-Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
+Future<void> bootstrap(
+  FutureOr<Widget> Function() builder,
+  String environment,
+) async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await configureDependencies(environment);
+
   FlutterError.onError = (details) {
     log(details.exceptionAsString(), stackTrace: details.stack);
   };
