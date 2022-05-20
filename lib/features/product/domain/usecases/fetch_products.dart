@@ -4,13 +4,13 @@ import 'package:test_lime_commerce/core/domain/use_case.dart';
 import 'package:test_lime_commerce/features/product/domain/entities/product.dart';
 import 'package:test_lime_commerce/features/product/domain/repositories/product_repository.dart';
 
-class FetchProduct extends UseCase<List<Product>, NoParam> {
-  FetchProduct(this.repository);
+class FetchProducts extends UseCase<List<Product>, NoParam> {
+  FetchProducts(this.repository);
 
   final ProductRepostiory repository;
 
   @override
   Future<Either<Failure, List<Product>>> call(NoParam params) async {
-    return repository.fetchListProduct();
+    return repository.fetchProducts();
   }
 }
