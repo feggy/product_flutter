@@ -17,8 +17,10 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$ProductEventTearOff {
   const _$ProductEventTearOff();
 
-  _Started started() {
-    return const _Started();
+  _FetchProductsEvent fetchProduct(int limit) {
+    return _FetchProductsEvent(
+      limit,
+    );
   }
 }
 
@@ -27,37 +29,43 @@ const $ProductEvent = _$ProductEventTearOff();
 
 /// @nodoc
 mixin _$ProductEvent {
+  int get limit => throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function(int limit) fetchProduct,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function(int limit)? fetchProduct,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function(int limit)? fetchProduct,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_FetchProductsEvent value) fetchProduct,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_FetchProductsEvent value)? fetchProduct,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_FetchProductsEvent value)? fetchProduct,
     required TResult orElse(),
   }) =>
+      throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $ProductEventCopyWith<ProductEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -66,6 +74,7 @@ abstract class $ProductEventCopyWith<$Res> {
   factory $ProductEventCopyWith(
           ProductEvent value, $Res Function(ProductEvent) then) =
       _$ProductEventCopyWithImpl<$Res>;
+  $Res call({int limit});
 }
 
 /// @nodoc
@@ -75,67 +84,108 @@ class _$ProductEventCopyWithImpl<$Res> implements $ProductEventCopyWith<$Res> {
   final ProductEvent _value;
   // ignore: unused_field
   final $Res Function(ProductEvent) _then;
-}
-
-/// @nodoc
-abstract class _$StartedCopyWith<$Res> {
-  factory _$StartedCopyWith(_Started value, $Res Function(_Started) then) =
-      __$StartedCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$StartedCopyWithImpl<$Res> extends _$ProductEventCopyWithImpl<$Res>
-    implements _$StartedCopyWith<$Res> {
-  __$StartedCopyWithImpl(_Started _value, $Res Function(_Started) _then)
-      : super(_value, (v) => _then(v as _Started));
 
   @override
-  _Started get _value => super._value as _Started;
+  $Res call({
+    Object? limit = freezed,
+  }) {
+    return _then(_value.copyWith(
+      limit: limit == freezed
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$FetchProductsEventCopyWith<$Res>
+    implements $ProductEventCopyWith<$Res> {
+  factory _$FetchProductsEventCopyWith(
+          _FetchProductsEvent value, $Res Function(_FetchProductsEvent) then) =
+      __$FetchProductsEventCopyWithImpl<$Res>;
+  @override
+  $Res call({int limit});
+}
+
+/// @nodoc
+class __$FetchProductsEventCopyWithImpl<$Res>
+    extends _$ProductEventCopyWithImpl<$Res>
+    implements _$FetchProductsEventCopyWith<$Res> {
+  __$FetchProductsEventCopyWithImpl(
+      _FetchProductsEvent _value, $Res Function(_FetchProductsEvent) _then)
+      : super(_value, (v) => _then(v as _FetchProductsEvent));
+
+  @override
+  _FetchProductsEvent get _value => super._value as _FetchProductsEvent;
+
+  @override
+  $Res call({
+    Object? limit = freezed,
+  }) {
+    return _then(_FetchProductsEvent(
+      limit == freezed
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
 }
 
 /// @nodoc
 
-class _$_Started implements _Started {
-  const _$_Started();
+class _$_FetchProductsEvent implements _FetchProductsEvent {
+  const _$_FetchProductsEvent(this.limit);
+
+  @override
+  final int limit;
 
   @override
   String toString() {
-    return 'ProductEvent.started()';
+    return 'ProductEvent.fetchProduct(limit: $limit)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _Started);
+        (other.runtimeType == runtimeType &&
+            other is _FetchProductsEvent &&
+            const DeepCollectionEquality().equals(other.limit, limit));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(limit));
+
+  @JsonKey(ignore: true)
+  @override
+  _$FetchProductsEventCopyWith<_FetchProductsEvent> get copyWith =>
+      __$FetchProductsEventCopyWithImpl<_FetchProductsEvent>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function(int limit) fetchProduct,
   }) {
-    return started();
+    return fetchProduct(limit);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function(int limit)? fetchProduct,
   }) {
-    return started?.call();
+    return fetchProduct?.call(limit);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function(int limit)? fetchProduct,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started();
+    if (fetchProduct != null) {
+      return fetchProduct(limit);
     }
     return orElse();
   }
@@ -143,42 +193,56 @@ class _$_Started implements _Started {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
+    required TResult Function(_FetchProductsEvent value) fetchProduct,
   }) {
-    return started(this);
+    return fetchProduct(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_FetchProductsEvent value)? fetchProduct,
   }) {
-    return started?.call(this);
+    return fetchProduct?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
+    TResult Function(_FetchProductsEvent value)? fetchProduct,
     required TResult orElse(),
   }) {
-    if (started != null) {
-      return started(this);
+    if (fetchProduct != null) {
+      return fetchProduct(this);
     }
     return orElse();
   }
 }
 
-abstract class _Started implements ProductEvent {
-  const factory _Started() = _$_Started;
+abstract class _FetchProductsEvent implements ProductEvent {
+  const factory _FetchProductsEvent(int limit) = _$_FetchProductsEvent;
+
+  @override
+  int get limit;
+  @override
+  @JsonKey(ignore: true)
+  _$FetchProductsEventCopyWith<_FetchProductsEvent> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 class _$ProductStateTearOff {
   const _$ProductStateTearOff();
 
-  _Initial initial() {
-    return const _Initial();
+  _ProductState call(
+      {required Option<Either<Failure, List<Product>>> productOrFailureOption,
+      required bool isLoading,
+      required bool isLoadMore}) {
+    return _ProductState(
+      productOrFailureOption: productOrFailureOption,
+      isLoading: isLoading,
+      isLoadMore: isLoadMore,
+    );
   }
 }
 
@@ -187,37 +251,13 @@ const $ProductState = _$ProductStateTearOff();
 
 /// @nodoc
 mixin _$ProductState {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-  }) =>
+  Option<Either<Failure, List<Product>>> get productOrFailureOption =>
       throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    required TResult orElse(),
-  }) =>
+  bool get isLoading => throw _privateConstructorUsedError;
+  bool get isLoadMore => throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $ProductStateCopyWith<ProductState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -226,6 +266,10 @@ abstract class $ProductStateCopyWith<$Res> {
   factory $ProductStateCopyWith(
           ProductState value, $Res Function(ProductState) then) =
       _$ProductStateCopyWithImpl<$Res>;
+  $Res call(
+      {Option<Either<Failure, List<Product>>> productOrFailureOption,
+      bool isLoading,
+      bool isLoadMore});
 }
 
 /// @nodoc
@@ -235,100 +279,135 @@ class _$ProductStateCopyWithImpl<$Res> implements $ProductStateCopyWith<$Res> {
   final ProductState _value;
   // ignore: unused_field
   final $Res Function(ProductState) _then;
-}
-
-/// @nodoc
-abstract class _$InitialCopyWith<$Res> {
-  factory _$InitialCopyWith(_Initial value, $Res Function(_Initial) then) =
-      __$InitialCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$InitialCopyWithImpl<$Res> extends _$ProductStateCopyWithImpl<$Res>
-    implements _$InitialCopyWith<$Res> {
-  __$InitialCopyWithImpl(_Initial _value, $Res Function(_Initial) _then)
-      : super(_value, (v) => _then(v as _Initial));
 
   @override
-  _Initial get _value => super._value as _Initial;
+  $Res call({
+    Object? productOrFailureOption = freezed,
+    Object? isLoading = freezed,
+    Object? isLoadMore = freezed,
+  }) {
+    return _then(_value.copyWith(
+      productOrFailureOption: productOrFailureOption == freezed
+          ? _value.productOrFailureOption
+          : productOrFailureOption // ignore: cast_nullable_to_non_nullable
+              as Option<Either<Failure, List<Product>>>,
+      isLoading: isLoading == freezed
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isLoadMore: isLoadMore == freezed
+          ? _value.isLoadMore
+          : isLoadMore // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$ProductStateCopyWith<$Res>
+    implements $ProductStateCopyWith<$Res> {
+  factory _$ProductStateCopyWith(
+          _ProductState value, $Res Function(_ProductState) then) =
+      __$ProductStateCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {Option<Either<Failure, List<Product>>> productOrFailureOption,
+      bool isLoading,
+      bool isLoadMore});
+}
+
+/// @nodoc
+class __$ProductStateCopyWithImpl<$Res> extends _$ProductStateCopyWithImpl<$Res>
+    implements _$ProductStateCopyWith<$Res> {
+  __$ProductStateCopyWithImpl(
+      _ProductState _value, $Res Function(_ProductState) _then)
+      : super(_value, (v) => _then(v as _ProductState));
+
+  @override
+  _ProductState get _value => super._value as _ProductState;
+
+  @override
+  $Res call({
+    Object? productOrFailureOption = freezed,
+    Object? isLoading = freezed,
+    Object? isLoadMore = freezed,
+  }) {
+    return _then(_ProductState(
+      productOrFailureOption: productOrFailureOption == freezed
+          ? _value.productOrFailureOption
+          : productOrFailureOption // ignore: cast_nullable_to_non_nullable
+              as Option<Either<Failure, List<Product>>>,
+      isLoading: isLoading == freezed
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isLoadMore: isLoadMore == freezed
+          ? _value.isLoadMore
+          : isLoadMore // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
 }
 
 /// @nodoc
 
-class _$_Initial implements _Initial {
-  const _$_Initial();
+class _$_ProductState implements _ProductState {
+  const _$_ProductState(
+      {required this.productOrFailureOption,
+      required this.isLoading,
+      required this.isLoadMore});
+
+  @override
+  final Option<Either<Failure, List<Product>>> productOrFailureOption;
+  @override
+  final bool isLoading;
+  @override
+  final bool isLoadMore;
 
   @override
   String toString() {
-    return 'ProductState.initial()';
+    return 'ProductState(productOrFailureOption: $productOrFailureOption, isLoading: $isLoading, isLoadMore: $isLoadMore)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _Initial);
+        (other.runtimeType == runtimeType &&
+            other is _ProductState &&
+            const DeepCollectionEquality()
+                .equals(other.productOrFailureOption, productOrFailureOption) &&
+            const DeepCollectionEquality().equals(other.isLoading, isLoading) &&
+            const DeepCollectionEquality()
+                .equals(other.isLoadMore, isLoadMore));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(productOrFailureOption),
+      const DeepCollectionEquality().hash(isLoading),
+      const DeepCollectionEquality().hash(isLoadMore));
 
+  @JsonKey(ignore: true)
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-  }) {
-    return initial();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-  }) {
-    return initial?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-  }) {
-    return initial(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-  }) {
-    return initial?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial(this);
-    }
-    return orElse();
-  }
+  _$ProductStateCopyWith<_ProductState> get copyWith =>
+      __$ProductStateCopyWithImpl<_ProductState>(this, _$identity);
 }
 
-abstract class _Initial implements ProductState {
-  const factory _Initial() = _$_Initial;
+abstract class _ProductState implements ProductState {
+  const factory _ProductState(
+      {required Option<Either<Failure, List<Product>>> productOrFailureOption,
+      required bool isLoading,
+      required bool isLoadMore}) = _$_ProductState;
+
+  @override
+  Option<Either<Failure, List<Product>>> get productOrFailureOption;
+  @override
+  bool get isLoading;
+  @override
+  bool get isLoadMore;
+  @override
+  @JsonKey(ignore: true)
+  _$ProductStateCopyWith<_ProductState> get copyWith =>
+      throw _privateConstructorUsedError;
 }

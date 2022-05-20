@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_lime_commerce/l10n/l10n.dart';
 
 class Amount extends StatelessWidget {
   const Amount({
@@ -19,7 +20,7 @@ class Amount extends StatelessWidget {
       child: Row(
         children: [
           Text(
-            '\$$discount',
+            context.l10n.productPrice(discount),
             style: const TextStyle(
               color: Colors.grey,
               fontSize: 9,
@@ -29,7 +30,7 @@ class Amount extends StatelessWidget {
           Container(
             margin: const EdgeInsets.only(left: 5),
             child: Text(
-              '\$$amountAfterDiscount',
+              context.l10n.productPrice(amountAfterDiscount),
               style: const TextStyle(
                 color: Colors.black87,
                 fontSize: 10,

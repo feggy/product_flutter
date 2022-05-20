@@ -43,7 +43,7 @@ void main() {
           () => productRepostiory.getSavedProduct(),
         ).thenAnswer((_) async => right([product, product]));
         // act
-        final result = await systemUnderTest(NoParam());
+        final result = await systemUnderTest(NoParams());
         final data = result.unwrapRight();
         // assert
         verify(
@@ -65,7 +65,7 @@ void main() {
           (_) async => left(const Failure.localFailure(message: 'Load Failed')),
         );
         // act
-        final result = await systemUnderTest(NoParam());
+        final result = await systemUnderTest(NoParams());
         final data = result.unwrapRight();
         final failure = result.getLeft();
         // assert

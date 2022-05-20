@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class Discount extends StatelessWidget {
   const Discount({Key? key, required this.discount}) : super(key: key);
 
-  final int discount;
+  final double discount;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class Discount extends StatelessWidget {
             ),
             children: [
               TextSpan(
-                text: '$discount%',
+                text: '${discount.toInt()}%',
                 style: const TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w700,

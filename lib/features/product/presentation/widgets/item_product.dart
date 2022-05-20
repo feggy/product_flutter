@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_lime_commerce/features/product/domain/entities/product.dart';
 import 'package:test_lime_commerce/features/product/presentation/widgets/amount.dart';
 import 'package:test_lime_commerce/features/product/presentation/widgets/discount.dart';
 import 'package:test_lime_commerce/features/product/presentation/widgets/favorite.dart';
@@ -7,7 +8,9 @@ import 'package:test_lime_commerce/features/product/presentation/widgets/title_p
 import 'package:test_lime_commerce/widgets/rating_bar.dart';
 
 class ItemProduct extends StatelessWidget {
-  const ItemProduct({Key? key}) : super(key: key);
+  const ItemProduct({Key? key, required this.product}) : super(key: key);
+
+  final Product product;
 
   @override
   Widget build(BuildContext context) {
@@ -32,16 +35,15 @@ class ItemProduct extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  const ImageUrl(
-                    imageUrl:
-                        'https://dummyjson.com/image/i/products/11/thumbnail.jpg',
+                  ImageUrl(
+                    imageUrl: product.thumbnail,
                   ),
-                  const TitleProduct(
-                    title: 'Makeup Wedding pengantin dan keluarga',
+                  TitleProduct(
+                    title: product.title,
                   ),
-                  const Amount(
-                    price: 15,
-                    disc: 10,
+                  Amount(
+                    price: product.price,
+                    disc: product.discountPercentage,
                   ),
                   Container(
                     margin: const EdgeInsets.only(
@@ -52,15 +54,15 @@ class ItemProduct extends StatelessWidget {
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
-                        RatingBarCustom(rating: 3.2),
-                        FavoriteButton(isFavorite: true),
+                      children: [
+                        RatingBarCustom(rating: product.rating),
+                        const FavoriteButton(isFavorite: true),
                       ],
                     ),
                   ),
                 ],
               ),
-              const Discount(discount: 15),
+              Discount(discount: product.discountPercentage),
             ],
           ),
         ),
