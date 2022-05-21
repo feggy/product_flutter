@@ -7,7 +7,9 @@
 
 import 'package:test_lime_commerce/app/app.dart';
 import 'package:test_lime_commerce/bootstrap.dart';
+import 'package:test_lime_commerce/core/config/build_config.dart';
 
 void main() {
-  bootstrap(() => const App(), 'development');
+  BuildConfig.setEnvironment(Env.development);
+  bootstrap(() => const App(), Env.development.name);
 }

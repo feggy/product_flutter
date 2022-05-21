@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:test_lime_commerce/widgets/shimmer_square.dart';
+import 'package:test_lime_commerce/shared/widgets/shimmer_square.dart';
 
 class ImageUrl extends StatelessWidget {
   const ImageUrl({Key? key, required this.imageUrl}) : super(key: key);

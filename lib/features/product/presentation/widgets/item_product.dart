@@ -5,7 +5,7 @@ import 'package:test_lime_commerce/features/product/presentation/widgets/discoun
 import 'package:test_lime_commerce/features/product/presentation/widgets/favorite.dart';
 import 'package:test_lime_commerce/features/product/presentation/widgets/image_url.dart';
 import 'package:test_lime_commerce/features/product/presentation/widgets/title_product.dart';
-import 'package:test_lime_commerce/widgets/rating_bar.dart';
+import 'package:test_lime_commerce/shared/widgets/rating_bar.dart';
 
 class ItemProduct extends StatelessWidget {
   const ItemProduct({Key? key, required this.product}) : super(key: key);

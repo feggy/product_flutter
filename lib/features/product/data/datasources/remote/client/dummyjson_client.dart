@@ -6,7 +6,7 @@ import 'package:test_lime_commerce/features/product/data/models/responses/res_pr
 part 'dummyjson_client.g.dart';
 
 @lazySingleton
-@RestApi(baseUrl: 'https://dummyjson.com/')
+@RestApi()
 abstract class DummyJsonClient {
   @factoryMethod
   factory DummyJsonClient(Dio dio) = _DummyJsonClient;
