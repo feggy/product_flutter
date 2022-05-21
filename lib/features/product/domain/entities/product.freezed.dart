@@ -28,7 +28,8 @@ class _$ProductTearOff {
       required String brand,
       required String category,
       required String thumbnail,
-      required List<String> images}) {
+      required List<String> images,
+      bool? isFavorite = false}) {
     return _Product(
       id: id,
       title: title,
@@ -41,6 +42,7 @@ class _$ProductTearOff {
       category: category,
       thumbnail: thumbnail,
       images: images,
+      isFavorite: isFavorite,
     );
   }
 }
@@ -61,6 +63,7 @@ mixin _$Product {
   String get category => throw _privateConstructorUsedError;
   String get thumbnail => throw _privateConstructorUsedError;
   List<String> get images => throw _privateConstructorUsedError;
+  bool? get isFavorite => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $ProductCopyWith<Product> get copyWith => throw _privateConstructorUsedError;
@@ -81,7 +84,8 @@ abstract class $ProductCopyWith<$Res> {
       String brand,
       String category,
       String thumbnail,
-      List<String> images});
+      List<String> images,
+      bool? isFavorite});
 }
 
 /// @nodoc
@@ -105,6 +109,7 @@ class _$ProductCopyWithImpl<$Res> implements $ProductCopyWith<$Res> {
     Object? category = freezed,
     Object? thumbnail = freezed,
     Object? images = freezed,
+    Object? isFavorite = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -151,6 +156,10 @@ class _$ProductCopyWithImpl<$Res> implements $ProductCopyWith<$Res> {
           ? _value.images
           : images // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      isFavorite: isFavorite == freezed
+          ? _value.isFavorite
+          : isFavorite // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ));
   }
 }
@@ -171,7 +180,8 @@ abstract class _$ProductCopyWith<$Res> implements $ProductCopyWith<$Res> {
       String brand,
       String category,
       String thumbnail,
-      List<String> images});
+      List<String> images,
+      bool? isFavorite});
 }
 
 /// @nodoc
@@ -196,6 +206,7 @@ class __$ProductCopyWithImpl<$Res> extends _$ProductCopyWithImpl<$Res>
     Object? category = freezed,
     Object? thumbnail = freezed,
     Object? images = freezed,
+    Object? isFavorite = freezed,
   }) {
     return _then(_Product(
       id: id == freezed
@@ -242,6 +253,10 @@ class __$ProductCopyWithImpl<$Res> extends _$ProductCopyWithImpl<$Res>
           ? _value.images
           : images // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      isFavorite: isFavorite == freezed
+          ? _value.isFavorite
+          : isFavorite // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ));
   }
 }
@@ -260,7 +275,8 @@ class _$_Product implements _Product {
       required this.brand,
       required this.category,
       required this.thumbnail,
-      required this.images});
+      required this.images,
+      this.isFavorite = false});
 
   @override
   final int id;
@@ -284,10 +300,13 @@ class _$_Product implements _Product {
   final String thumbnail;
   @override
   final List<String> images;
+  @JsonKey()
+  @override
+  final bool? isFavorite;
 
   @override
   String toString() {
-    return 'Product(id: $id, title: $title, description: $description, price: $price, discountPercentage: $discountPercentage, rating: $rating, stock: $stock, brand: $brand, category: $category, thumbnail: $thumbnail, images: $images)';
+    return 'Product(id: $id, title: $title, description: $description, price: $price, discountPercentage: $discountPercentage, rating: $rating, stock: $stock, brand: $brand, category: $category, thumbnail: $thumbnail, images: $images, isFavorite: $isFavorite)';
   }
 
   @override
@@ -307,7 +326,9 @@ class _$_Product implements _Product {
             const DeepCollectionEquality().equals(other.brand, brand) &&
             const DeepCollectionEquality().equals(other.category, category) &&
             const DeepCollectionEquality().equals(other.thumbnail, thumbnail) &&
-            const DeepCollectionEquality().equals(other.images, images));
+            const DeepCollectionEquality().equals(other.images, images) &&
+            const DeepCollectionEquality()
+                .equals(other.isFavorite, isFavorite));
   }
 
   @override
@@ -323,7 +344,8 @@ class _$_Product implements _Product {
       const DeepCollectionEquality().hash(brand),
       const DeepCollectionEquality().hash(category),
       const DeepCollectionEquality().hash(thumbnail),
-      const DeepCollectionEquality().hash(images));
+      const DeepCollectionEquality().hash(images),
+      const DeepCollectionEquality().hash(isFavorite));
 
   @JsonKey(ignore: true)
   @override
@@ -343,7 +365,8 @@ abstract class _Product implements Product {
       required String brand,
       required String category,
       required String thumbnail,
-      required List<String> images}) = _$_Product;
+      required List<String> images,
+      bool? isFavorite}) = _$_Product;
 
   @override
   int get id;
@@ -367,6 +390,8 @@ abstract class _Product implements Product {
   String get thumbnail;
   @override
   List<String> get images;
+  @override
+  bool? get isFavorite;
   @override
   @JsonKey(ignore: true)
   _$ProductCopyWith<_Product> get copyWith =>

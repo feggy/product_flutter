@@ -5,6 +5,5 @@ import 'package:test_lime_commerce/features/product/domain/entities/product.dart
 abstract class ProductRepostiory {
   Future<Either<Failure, List<Product>>> fetchProducts(int limit);
   Future<Either<Failure, Unit>> saveProduct(Product product);
-  Future<Either<Failure, List<Product>>> getSavedProduct();
   Future<Either<Failure, Unit>> deleteSavedProduct(Product product);
 }

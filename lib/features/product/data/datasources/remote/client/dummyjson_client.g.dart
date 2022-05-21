@@ -7,9 +7,7 @@ part of 'dummyjson_client.dart';
 // **************************************************************************
 
 class _DummyJsonClient implements DummyJsonClient {
-  _DummyJsonClient(this._dio, {this.baseUrl}) {
-    baseUrl ??= 'https://dummyjson.com/';
-  }
+  _DummyJsonClient(this._dio, {this.baseUrl});
 
   final Dio _dio;
 

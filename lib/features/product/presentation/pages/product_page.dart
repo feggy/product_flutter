@@ -12,10 +12,13 @@ class ProductPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final productList = useState(<Product>[]);
+    final limitProduct = useState(10);
+    final _scrollController = ScrollController();
+
     return BlocProvider(
       create: (context) => getIt<ProductBloc>()
         ..add(
-          const ProductEvent.fetchProduct(10),
+          ProductEvent.fetchProduct(limitProduct.value),
         ),
       child: BlocListener<ProductBloc, ProductState>(
         listener: (context, state) {
@@ -31,6 +34,23 @@ class ProductPage extends HookWidget {
               },
             ),
           );
+          state.successOrFailureMessage.fold(
+            () => null,
+            (either) => either.fold(
+              (l) => ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text(l),
+                  backgroundColor: Colors.black45,
+                ),
+              ),
+              (r) => ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text(r),
+                  backgroundColor: Colors.black45,
+                ),
+              ),
+            ),
+          );
         },
         child: Scaffold(
           appBar: AppBar(
@@ -44,21 +64,35 @@ class ProductPage extends HookWidget {
                   child: CircularProgressIndicator.adaptive(),
                 );
               } else {
-                return GridView.count(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 16,
-                    vertical: 20,
-                  ),
-                  mainAxisSpacing: 10,
-                  crossAxisSpacing: 10,
-                  crossAxisCount: 2,
-                  shrinkWrap: true,
-                  childAspectRatio:
-                      MediaQuery.of(context).size.aspectRatio * 1.5,
-                  children: List.generate(
-                    productList.value.length,
-                    (index) => ItemProduct(product: productList.value[index]),
-                  ).toList(),
+                return Column(
+                  children: [
+                    Expanded(
+                      child: GridView.builder(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 16,
+                          vertical: 20,
+                        ),
+                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 2,
+                          mainAxisSpacing: 10,
+                          crossAxisSpacing: 10,
+                          childAspectRatio:
+                              MediaQuery.of(context).size.aspectRatio * 1.5,
+                        ),
+                        itemBuilder: (ctx, index) {
+                          return ItemProduct(product: productList.value[index]);
+                        },
+                        controller: _scrollController,
+                        itemCount: productList.value.length,
+                      ),
+                    ),
+                    Visibility(
+                      visible: state.isLoadMore,
+                      child: const Center(
+                        child: CircularProgressIndicator.adaptive(),
+                      ),
+                    ),
+                  ],
                 );
               }
             },

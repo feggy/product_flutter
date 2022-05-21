@@ -20,5 +20,6 @@ class Product with _$Product {
     required String category,
     required String thumbnail,
     required List<String> images,
+    @Default(false) bool? isFavorite,
   }) = _Product;
 }

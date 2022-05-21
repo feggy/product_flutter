@@ -56,7 +56,10 @@ class ItemProduct extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         RatingBarCustom(rating: product.rating),
-                        const FavoriteButton(isFavorite: true),
+                        FavoriteButton(
+                          product: product,
+                          isFavorite: product.isFavorite ?? false,
+                        ),
                       ],
                     ),
                   ),
