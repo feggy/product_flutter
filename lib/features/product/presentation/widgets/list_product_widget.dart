@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:test_lime_commerce/features/product/domain/entities/product.dart';
@@ -16,7 +14,7 @@ class ListProductWidget extends StatefulWidget {
 }
 
 class _ListProductWidgetState extends State<ListProductWidget> {
-  int limitProduct = 10;
+  int limitProduct = 20;
   int totalProduct = 0;
   List<Product> products = [];
 
@@ -35,8 +33,7 @@ class _ListProductWidgetState extends State<ListProductWidget> {
               (r) {
                 setState(() {
                   totalProduct = r.total;
-                  limitProduct += 10;
-                  log('>> $limitProduct');
+                  limitProduct = r.limit;
                 });
                 products
                   ..clear()
@@ -84,11 +81,9 @@ class _ListProductWidgetState extends State<ListProductWidget> {
                 ),
                 itemBuilder: (ctx, index) {
                   if (index >= products.length) {
-                    context.read<ProductBloc>().add(
-                          ProductEvent.loadMore(
-                            limitProduct + 10,
-                          ),
-                        );
+                    context
+                        .read<ProductBloc>()
+                        .add(ProductEvent.loadMore(limitProduct));
 
                     return const ShimmerSquareWidget(
                       width: double.infinity,

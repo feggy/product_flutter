@@ -45,7 +45,7 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
     _LoadMoreEvent event,
     Emitter<ProductState> emit,
   ) async {
-    final data = await _fetchProducts(FetchProductsParams(event.limit + 10));
+    final data = await _fetchProducts(FetchProductsParams(event.limit + 20));
     emit(state.copyWith(productOrFailureOption: optionOf(data)));
     emit(state.copyWith(productOrFailureOption: none()));
   }
