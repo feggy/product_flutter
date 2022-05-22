@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
 import 'package:test_lime_commerce/core/domain/failures/failure.dart';
@@ -25,7 +23,6 @@ class ProductRepositoryImpl implements ProductRepostiory {
     return _productRemoteDataSource.fetchProducts(limit).then(
       (value) async {
         final savedProducts = await _productLocalDataSource.getSavedProducts();
-        log('>> LOCAL PRODUCTS $savedProducts');
 
         final products = <Product>[];
 
@@ -38,7 +35,9 @@ class ProductRepositoryImpl implements ProductRepostiory {
             (e) => e.id == element.productId,
           );
 
-          products[a] = products[a].copyWith(isFavorite: true);
+          if (a >= 0) {
+            products[a] = products[a].copyWith(isFavorite: true);
+          }
         });
 
         return right(products);
@@ -74,7 +73,6 @@ class ProductRepositoryImpl implements ProductRepostiory {
       );
       return right(unit);
     } catch (e) {
-      log('> ${e.toString()}');
       return left(Failure.localFailure(message: e.toString()));
     }
   }

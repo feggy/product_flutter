@@ -1,9 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:test_lime_commerce/shared/widgets/shimmer_square.dart';
+import 'package:test_lime_commerce/shared/widgets/shimmer_square_widget.dart';
 
-class ImageUrl extends StatelessWidget {
-  const ImageUrl({Key? key, required this.imageUrl}) : super(key: key);
+class ImageUrlWidget extends StatelessWidget {
+  const ImageUrlWidget({Key? key, required this.imageUrl}) : super(key: key);
 
   final String imageUrl;
 
@@ -19,7 +19,7 @@ class ImageUrl extends StatelessWidget {
         height: 150,
         fit: BoxFit.cover,
         imageUrl: imageUrl,
-        placeholder: (_, __) => const ShimmerSquare(
+        placeholder: (_, __) => const ShimmerSquareWidget(
           width: double.infinity,
           height: 150,
         ),

@@ -23,6 +23,12 @@ class _$ProductEventTearOff {
     );
   }
 
+  _LoadMoreEvent loadMore(int limit) {
+    return _LoadMoreEvent(
+      limit,
+    );
+  }
+
   _SaveFavoriteEvent saveFavorite(Product product) {
     return _SaveFavoriteEvent(
       product,
@@ -44,6 +50,7 @@ mixin _$ProductEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(int limit) fetchProduct,
+    required TResult Function(int limit) loadMore,
     required TResult Function(Product product) saveFavorite,
     required TResult Function(Product product) deleteFavorite,
   }) =>
@@ -51,6 +58,7 @@ mixin _$ProductEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(int limit)? fetchProduct,
+    TResult Function(int limit)? loadMore,
     TResult Function(Product product)? saveFavorite,
     TResult Function(Product product)? deleteFavorite,
   }) =>
@@ -58,6 +66,7 @@ mixin _$ProductEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int limit)? fetchProduct,
+    TResult Function(int limit)? loadMore,
     TResult Function(Product product)? saveFavorite,
     TResult Function(Product product)? deleteFavorite,
     required TResult orElse(),
@@ -66,6 +75,7 @@ mixin _$ProductEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_FetchProductsEvent value) fetchProduct,
+    required TResult Function(_LoadMoreEvent value) loadMore,
     required TResult Function(_SaveFavoriteEvent value) saveFavorite,
     required TResult Function(_DeleteFavoriteEvent value) deleteFavorite,
   }) =>
@@ -73,6 +83,7 @@ mixin _$ProductEvent {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_FetchProductsEvent value)? fetchProduct,
+    TResult Function(_LoadMoreEvent value)? loadMore,
     TResult Function(_SaveFavoriteEvent value)? saveFavorite,
     TResult Function(_DeleteFavoriteEvent value)? deleteFavorite,
   }) =>
@@ -80,6 +91,7 @@ mixin _$ProductEvent {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FetchProductsEvent value)? fetchProduct,
+    TResult Function(_LoadMoreEvent value)? loadMore,
     TResult Function(_SaveFavoriteEvent value)? saveFavorite,
     TResult Function(_DeleteFavoriteEvent value)? deleteFavorite,
     required TResult orElse(),
@@ -169,6 +181,7 @@ class _$_FetchProductsEvent implements _FetchProductsEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(int limit) fetchProduct,
+    required TResult Function(int limit) loadMore,
     required TResult Function(Product product) saveFavorite,
     required TResult Function(Product product) deleteFavorite,
   }) {
@@ -179,6 +192,7 @@ class _$_FetchProductsEvent implements _FetchProductsEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(int limit)? fetchProduct,
+    TResult Function(int limit)? loadMore,
     TResult Function(Product product)? saveFavorite,
     TResult Function(Product product)? deleteFavorite,
   }) {
@@ -189,6 +203,7 @@ class _$_FetchProductsEvent implements _FetchProductsEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int limit)? fetchProduct,
+    TResult Function(int limit)? loadMore,
     TResult Function(Product product)? saveFavorite,
     TResult Function(Product product)? deleteFavorite,
     required TResult orElse(),
@@ -203,6 +218,7 @@ class _$_FetchProductsEvent implements _FetchProductsEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_FetchProductsEvent value) fetchProduct,
+    required TResult Function(_LoadMoreEvent value) loadMore,
     required TResult Function(_SaveFavoriteEvent value) saveFavorite,
     required TResult Function(_DeleteFavoriteEvent value) deleteFavorite,
   }) {
@@ -213,6 +229,7 @@ class _$_FetchProductsEvent implements _FetchProductsEvent {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_FetchProductsEvent value)? fetchProduct,
+    TResult Function(_LoadMoreEvent value)? loadMore,
     TResult Function(_SaveFavoriteEvent value)? saveFavorite,
     TResult Function(_DeleteFavoriteEvent value)? deleteFavorite,
   }) {
@@ -223,6 +240,7 @@ class _$_FetchProductsEvent implements _FetchProductsEvent {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FetchProductsEvent value)? fetchProduct,
+    TResult Function(_LoadMoreEvent value)? loadMore,
     TResult Function(_SaveFavoriteEvent value)? saveFavorite,
     TResult Function(_DeleteFavoriteEvent value)? deleteFavorite,
     required TResult orElse(),
@@ -240,6 +258,152 @@ abstract class _FetchProductsEvent implements ProductEvent {
   int get limit;
   @JsonKey(ignore: true)
   _$FetchProductsEventCopyWith<_FetchProductsEvent> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$LoadMoreEventCopyWith<$Res> {
+  factory _$LoadMoreEventCopyWith(
+          _LoadMoreEvent value, $Res Function(_LoadMoreEvent) then) =
+      __$LoadMoreEventCopyWithImpl<$Res>;
+  $Res call({int limit});
+}
+
+/// @nodoc
+class __$LoadMoreEventCopyWithImpl<$Res>
+    extends _$ProductEventCopyWithImpl<$Res>
+    implements _$LoadMoreEventCopyWith<$Res> {
+  __$LoadMoreEventCopyWithImpl(
+      _LoadMoreEvent _value, $Res Function(_LoadMoreEvent) _then)
+      : super(_value, (v) => _then(v as _LoadMoreEvent));
+
+  @override
+  _LoadMoreEvent get _value => super._value as _LoadMoreEvent;
+
+  @override
+  $Res call({
+    Object? limit = freezed,
+  }) {
+    return _then(_LoadMoreEvent(
+      limit == freezed
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_LoadMoreEvent implements _LoadMoreEvent {
+  const _$_LoadMoreEvent(this.limit);
+
+  @override
+  final int limit;
+
+  @override
+  String toString() {
+    return 'ProductEvent.loadMore(limit: $limit)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _LoadMoreEvent &&
+            const DeepCollectionEquality().equals(other.limit, limit));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(limit));
+
+  @JsonKey(ignore: true)
+  @override
+  _$LoadMoreEventCopyWith<_LoadMoreEvent> get copyWith =>
+      __$LoadMoreEventCopyWithImpl<_LoadMoreEvent>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int limit) fetchProduct,
+    required TResult Function(int limit) loadMore,
+    required TResult Function(Product product) saveFavorite,
+    required TResult Function(Product product) deleteFavorite,
+  }) {
+    return loadMore(limit);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(int limit)? fetchProduct,
+    TResult Function(int limit)? loadMore,
+    TResult Function(Product product)? saveFavorite,
+    TResult Function(Product product)? deleteFavorite,
+  }) {
+    return loadMore?.call(limit);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int limit)? fetchProduct,
+    TResult Function(int limit)? loadMore,
+    TResult Function(Product product)? saveFavorite,
+    TResult Function(Product product)? deleteFavorite,
+    required TResult orElse(),
+  }) {
+    if (loadMore != null) {
+      return loadMore(limit);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FetchProductsEvent value) fetchProduct,
+    required TResult Function(_LoadMoreEvent value) loadMore,
+    required TResult Function(_SaveFavoriteEvent value) saveFavorite,
+    required TResult Function(_DeleteFavoriteEvent value) deleteFavorite,
+  }) {
+    return loadMore(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_FetchProductsEvent value)? fetchProduct,
+    TResult Function(_LoadMoreEvent value)? loadMore,
+    TResult Function(_SaveFavoriteEvent value)? saveFavorite,
+    TResult Function(_DeleteFavoriteEvent value)? deleteFavorite,
+  }) {
+    return loadMore?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchProductsEvent value)? fetchProduct,
+    TResult Function(_LoadMoreEvent value)? loadMore,
+    TResult Function(_SaveFavoriteEvent value)? saveFavorite,
+    TResult Function(_DeleteFavoriteEvent value)? deleteFavorite,
+    required TResult orElse(),
+  }) {
+    if (loadMore != null) {
+      return loadMore(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoadMoreEvent implements ProductEvent {
+  const factory _LoadMoreEvent(int limit) = _$_LoadMoreEvent;
+
+  int get limit;
+  @JsonKey(ignore: true)
+  _$LoadMoreEventCopyWith<_LoadMoreEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -318,6 +482,7 @@ class _$_SaveFavoriteEvent implements _SaveFavoriteEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(int limit) fetchProduct,
+    required TResult Function(int limit) loadMore,
     required TResult Function(Product product) saveFavorite,
     required TResult Function(Product product) deleteFavorite,
   }) {
@@ -328,6 +493,7 @@ class _$_SaveFavoriteEvent implements _SaveFavoriteEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(int limit)? fetchProduct,
+    TResult Function(int limit)? loadMore,
     TResult Function(Product product)? saveFavorite,
     TResult Function(Product product)? deleteFavorite,
   }) {
@@ -338,6 +504,7 @@ class _$_SaveFavoriteEvent implements _SaveFavoriteEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int limit)? fetchProduct,
+    TResult Function(int limit)? loadMore,
     TResult Function(Product product)? saveFavorite,
     TResult Function(Product product)? deleteFavorite,
     required TResult orElse(),
@@ -352,6 +519,7 @@ class _$_SaveFavoriteEvent implements _SaveFavoriteEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_FetchProductsEvent value) fetchProduct,
+    required TResult Function(_LoadMoreEvent value) loadMore,
     required TResult Function(_SaveFavoriteEvent value) saveFavorite,
     required TResult Function(_DeleteFavoriteEvent value) deleteFavorite,
   }) {
@@ -362,6 +530,7 @@ class _$_SaveFavoriteEvent implements _SaveFavoriteEvent {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_FetchProductsEvent value)? fetchProduct,
+    TResult Function(_LoadMoreEvent value)? loadMore,
     TResult Function(_SaveFavoriteEvent value)? saveFavorite,
     TResult Function(_DeleteFavoriteEvent value)? deleteFavorite,
   }) {
@@ -372,6 +541,7 @@ class _$_SaveFavoriteEvent implements _SaveFavoriteEvent {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FetchProductsEvent value)? fetchProduct,
+    TResult Function(_LoadMoreEvent value)? loadMore,
     TResult Function(_SaveFavoriteEvent value)? saveFavorite,
     TResult Function(_DeleteFavoriteEvent value)? deleteFavorite,
     required TResult orElse(),
@@ -468,6 +638,7 @@ class _$_DeleteFavoriteEvent implements _DeleteFavoriteEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(int limit) fetchProduct,
+    required TResult Function(int limit) loadMore,
     required TResult Function(Product product) saveFavorite,
     required TResult Function(Product product) deleteFavorite,
   }) {
@@ -478,6 +649,7 @@ class _$_DeleteFavoriteEvent implements _DeleteFavoriteEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function(int limit)? fetchProduct,
+    TResult Function(int limit)? loadMore,
     TResult Function(Product product)? saveFavorite,
     TResult Function(Product product)? deleteFavorite,
   }) {
@@ -488,6 +660,7 @@ class _$_DeleteFavoriteEvent implements _DeleteFavoriteEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int limit)? fetchProduct,
+    TResult Function(int limit)? loadMore,
     TResult Function(Product product)? saveFavorite,
     TResult Function(Product product)? deleteFavorite,
     required TResult orElse(),
@@ -502,6 +675,7 @@ class _$_DeleteFavoriteEvent implements _DeleteFavoriteEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_FetchProductsEvent value) fetchProduct,
+    required TResult Function(_LoadMoreEvent value) loadMore,
     required TResult Function(_SaveFavoriteEvent value) saveFavorite,
     required TResult Function(_DeleteFavoriteEvent value) deleteFavorite,
   }) {
@@ -512,6 +686,7 @@ class _$_DeleteFavoriteEvent implements _DeleteFavoriteEvent {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_FetchProductsEvent value)? fetchProduct,
+    TResult Function(_LoadMoreEvent value)? loadMore,
     TResult Function(_SaveFavoriteEvent value)? saveFavorite,
     TResult Function(_DeleteFavoriteEvent value)? deleteFavorite,
   }) {
@@ -522,6 +697,7 @@ class _$_DeleteFavoriteEvent implements _DeleteFavoriteEvent {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FetchProductsEvent value)? fetchProduct,
+    TResult Function(_LoadMoreEvent value)? loadMore,
     TResult Function(_SaveFavoriteEvent value)? saveFavorite,
     TResult Function(_DeleteFavoriteEvent value)? deleteFavorite,
     required TResult orElse(),

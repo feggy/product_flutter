@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
-class ShimmerSquare extends StatelessWidget {
-  const ShimmerSquare({
+class ShimmerSquareWidget extends StatelessWidget {
+  const ShimmerSquareWidget({
     Key? key,
     required this.width,
     required this.height,

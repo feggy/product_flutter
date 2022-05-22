@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Discount extends StatelessWidget {
-  const Discount({Key? key, required this.discount}) : super(key: key);
+class DiscountWidget extends StatelessWidget {
+  const DiscountWidget({Key? key, required this.discount}) : super(key: key);
 
   final double discount;
 

@@ -24,6 +24,7 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
     on<_FetchProductsEvent>(_onFetchProduct);
     on<_SaveFavoriteEvent>(_onSaveFavorite);
     on<_DeleteFavoriteEvent>(_onDeleteFavorite);
+    on<_LoadMoreEvent>(_onLoadMore);
   }
   final FetchProducts _fetchProducts;
   final SaveProduct _saveFavorite;
@@ -39,6 +40,15 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
     emit(state.copyWith(isLoading: false, productOrFailureOption: none()));
   }
 
+  FutureOr<void> _onLoadMore(
+    _LoadMoreEvent event,
+    Emitter<ProductState> emit,
+  ) async {
+    final data = await _fetchProducts(FetchProductsParams(event.limit + 10));
+    emit(state.copyWith(productOrFailureOption: optionOf(data)));
+    emit(state.copyWith(productOrFailureOption: none()));
+  }
+
   FutureOr<void> _onSaveFavorite(
     _SaveFavoriteEvent event,
     Emitter<ProductState> emit,
@@ -48,7 +58,7 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
       emit(
         state.copyWith(
           successOrFailureMessage:
-              optionOf(right('Sukses menambahkan favorite')),
+              optionOf(right('Berhasil menambahkan favorite')),
         ),
       );
     } catch (e) {
@@ -69,7 +79,8 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
       await _deleteSavedFavorite(SavedProductParams(event.product));
       emit(
         state.copyWith(
-          successOrFailureMessage: optionOf(right('Sukses menghapus favorite')),
+          successOrFailureMessage:
+              optionOf(right('Berhasil menghapus favorite')),
         ),
       );
     } catch (e) {
@@ -80,9 +91,5 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
       );
     }
     emit(state.copyWith(successOrFailureMessage: none()));
-  }
-
-  FutureOr<void> loadMore(Emitter<ProductState> emit) async {
-    emit(state.copyWith(isLoadMore: true));
   }
 }

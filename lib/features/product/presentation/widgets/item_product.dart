@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:test_lime_commerce/features/product/domain/entities/product.dart';
-import 'package:test_lime_commerce/features/product/presentation/widgets/amount.dart';
-import 'package:test_lime_commerce/features/product/presentation/widgets/discount.dart';
-import 'package:test_lime_commerce/features/product/presentation/widgets/favorite.dart';
-import 'package:test_lime_commerce/features/product/presentation/widgets/image_url.dart';
-import 'package:test_lime_commerce/features/product/presentation/widgets/title_product.dart';
-import 'package:test_lime_commerce/shared/widgets/rating_bar.dart';
+import 'package:test_lime_commerce/features/product/presentation/widgets/amount_widget.dart';
+import 'package:test_lime_commerce/features/product/presentation/widgets/discount_widget.dart';
+import 'package:test_lime_commerce/features/product/presentation/widgets/favorite_button_widget.dart';
+import 'package:test_lime_commerce/features/product/presentation/widgets/title_product_widget.dart';
+import 'package:test_lime_commerce/shared/widgets/image_url_widget.dart';
+import 'package:test_lime_commerce/shared/widgets/rating_bar_widget.dart';
 
 class ItemProduct extends StatelessWidget {
   const ItemProduct({Key? key, required this.product}) : super(key: key);
@@ -35,13 +35,11 @@ class ItemProduct extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  ImageUrl(
+                  ImageUrlWidget(
                     imageUrl: product.thumbnail,
                   ),
-                  TitleProduct(
-                    title: product.title,
-                  ),
-                  Amount(
+                  TitleProductWidget(title: product.title),
+                  AmountWidget(
                     price: product.price,
                     disc: product.discountPercentage,
                   ),
@@ -55,8 +53,8 @@ class ItemProduct extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        RatingBarCustom(rating: product.rating),
-                        FavoriteButton(
+                        RatingBarWidget(rating: product.rating),
+                        FavoriteButtonWidget(
                           product: product,
                           isFavorite: product.isFavorite ?? false,
                         ),
@@ -65,7 +63,7 @@ class ItemProduct extends StatelessWidget {
                   ),
                 ],
               ),
-              Discount(discount: product.discountPercentage),
+              DiscountWidget(discount: product.discountPercentage),
             ],
           ),
         ),

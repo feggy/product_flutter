@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:test_lime_commerce/features/product/domain/entities/product.dart';
 import 'package:test_lime_commerce/features/product/presentation/bloc/product_bloc.dart';
 
-class FavoriteButton extends StatefulWidget {
-  const FavoriteButton({
+class FavoriteButtonWidget extends StatefulWidget {
+  const FavoriteButtonWidget({
     Key? key,
     required this.product,
     required this.isFavorite,
@@ -14,10 +14,10 @@ class FavoriteButton extends StatefulWidget {
   final bool isFavorite;
 
   @override
-  State<FavoriteButton> createState() => _FavoriteButtonState();
+  State<FavoriteButtonWidget> createState() => _FavoriteButtonWidgetState();
 }
 
-class _FavoriteButtonState extends State<FavoriteButton> {
+class _FavoriteButtonWidgetState extends State<FavoriteButtonWidget> {
   bool favorite = false;
 
   @override

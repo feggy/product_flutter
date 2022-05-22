@@ -3,8 +3,8 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
-class RatingBarCustom extends StatelessWidget {
-  const RatingBarCustom({Key? key, required this.rating}) : super(key: key);
+class RatingBarWidget extends StatelessWidget {
+  const RatingBarWidget({Key? key, required this.rating}) : super(key: key);
 
   final double rating;
 

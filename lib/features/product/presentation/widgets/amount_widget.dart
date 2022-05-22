@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:test_lime_commerce/l10n/l10n.dart';
 
-class Amount extends StatelessWidget {
-  const Amount({
+class AmountWidget extends StatelessWidget {
+  const AmountWidget({
     Key? key,
     required this.price,
     required this.disc,
