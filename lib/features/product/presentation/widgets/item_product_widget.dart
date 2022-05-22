@@ -7,8 +7,8 @@ import 'package:test_lime_commerce/features/product/presentation/widgets/title_p
 import 'package:test_lime_commerce/shared/widgets/image_url_widget.dart';
 import 'package:test_lime_commerce/shared/widgets/rating_bar_widget.dart';
 
-class ItemProduct extends StatelessWidget {
-  const ItemProduct({Key? key, required this.product}) : super(key: key);
+class ItemProductWidget extends StatelessWidget {
+  const ItemProductWidget({Key? key, required this.product}) : super(key: key);
 
   final Product product;
 

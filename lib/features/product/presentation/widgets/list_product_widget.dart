@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:test_lime_commerce/features/product/domain/entities/product.dart';
 import 'package:test_lime_commerce/features/product/presentation/bloc/product_bloc.dart';
-import 'package:test_lime_commerce/features/product/presentation/widgets/item_product.dart';
+import 'package:test_lime_commerce/features/product/presentation/widgets/item_product_widget.dart';
 import 'package:test_lime_commerce/injector.dart';
 import 'package:test_lime_commerce/shared/widgets/shimmer_square_widget.dart';
 
@@ -90,9 +90,7 @@ class _ListProductWidgetState extends State<ListProductWidget> {
                       height: 100,
                     );
                   } else {
-                    return ItemProduct(
-                      product: products[index],
-                    );
+                    return ItemProductWidget(product: products[index]);
                   }
                 },
                 itemCount: products.length != totalProduct
