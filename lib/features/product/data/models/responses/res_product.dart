@@ -9,7 +9,7 @@ class ResProduct with _$ResProduct {
   const factory ResProduct({
     required List<ProductModel> products,
     required int total,
-    required String skip,
+    required dynamic skip,
     required int limit,
   }) = _ResProduct;
   factory ResProduct.fromJson(Map<String, dynamic> json) =>

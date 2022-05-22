@@ -5,6 +5,7 @@ import 'package:test_lime_commerce/features/product/data/datasources/local/produ
 import 'package:test_lime_commerce/features/product/data/datasources/remote/product_remote_data_source.dart';
 import 'package:test_lime_commerce/features/product/data/models/dao/product_model_dao.dart';
 import 'package:test_lime_commerce/features/product/data/models/responses/res_product.dart';
+import 'package:test_lime_commerce/features/product/domain/entities/data_product.dart';
 import 'package:test_lime_commerce/features/product/domain/entities/product.dart';
 import 'package:test_lime_commerce/features/product/domain/repositories/product_repository.dart';
 
@@ -19,15 +20,19 @@ class ProductRepositoryImpl implements ProductRepostiory {
   final ProductLocalDataSource _productLocalDataSource;
 
   @override
-  Future<Either<Failure, List<Product>>> fetchProducts(int limit) async {
+  Future<Either<Failure, DataProduct>> fetchProducts(int limit) async {
     return _productRemoteDataSource.fetchProducts(limit).then(
       (value) async {
         final savedProducts = await _productLocalDataSource.getSavedProducts();
 
         final products = <Product>[];
+        var total = 0;
+        var limit = 0;
 
         value.map((r) {
           products.addAll(r.toDomain());
+          total = r.total;
+          limit = r.limit;
         });
 
         savedProducts?.forEach((element) {
@@ -40,7 +45,14 @@ class ProductRepositoryImpl implements ProductRepostiory {
           }
         });
 
-        return right(products);
+        final dataProduct = DataProduct(
+          products: products,
+          total: total,
+          skip: null,
+          limit: limit,
+        );
+
+        return right(dataProduct);
       },
     );
   }

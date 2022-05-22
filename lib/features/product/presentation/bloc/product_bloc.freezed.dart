@@ -723,7 +723,7 @@ class _$ProductStateTearOff {
   const _$ProductStateTearOff();
 
   _ProductState call(
-      {required Option<Either<Failure, List<Product>>> productOrFailureOption,
+      {required Option<Either<Failure, DataProduct>> productOrFailureOption,
       required bool isLoading,
       required bool isLoadMore,
       required Option<Either<String, String>> successOrFailureMessage}) {
@@ -741,7 +741,7 @@ const $ProductState = _$ProductStateTearOff();
 
 /// @nodoc
 mixin _$ProductState {
-  Option<Either<Failure, List<Product>>> get productOrFailureOption =>
+  Option<Either<Failure, DataProduct>> get productOrFailureOption =>
       throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
   bool get isLoadMore => throw _privateConstructorUsedError;
@@ -759,7 +759,7 @@ abstract class $ProductStateCopyWith<$Res> {
           ProductState value, $Res Function(ProductState) then) =
       _$ProductStateCopyWithImpl<$Res>;
   $Res call(
-      {Option<Either<Failure, List<Product>>> productOrFailureOption,
+      {Option<Either<Failure, DataProduct>> productOrFailureOption,
       bool isLoading,
       bool isLoadMore,
       Option<Either<String, String>> successOrFailureMessage});
@@ -784,7 +784,7 @@ class _$ProductStateCopyWithImpl<$Res> implements $ProductStateCopyWith<$Res> {
       productOrFailureOption: productOrFailureOption == freezed
           ? _value.productOrFailureOption
           : productOrFailureOption // ignore: cast_nullable_to_non_nullable
-              as Option<Either<Failure, List<Product>>>,
+              as Option<Either<Failure, DataProduct>>,
       isLoading: isLoading == freezed
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
@@ -809,7 +809,7 @@ abstract class _$ProductStateCopyWith<$Res>
       __$ProductStateCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Option<Either<Failure, List<Product>>> productOrFailureOption,
+      {Option<Either<Failure, DataProduct>> productOrFailureOption,
       bool isLoading,
       bool isLoadMore,
       Option<Either<String, String>> successOrFailureMessage});
@@ -836,7 +836,7 @@ class __$ProductStateCopyWithImpl<$Res> extends _$ProductStateCopyWithImpl<$Res>
       productOrFailureOption: productOrFailureOption == freezed
           ? _value.productOrFailureOption
           : productOrFailureOption // ignore: cast_nullable_to_non_nullable
-              as Option<Either<Failure, List<Product>>>,
+              as Option<Either<Failure, DataProduct>>,
       isLoading: isLoading == freezed
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
@@ -863,7 +863,7 @@ class _$_ProductState implements _ProductState {
       required this.successOrFailureMessage});
 
   @override
-  final Option<Either<Failure, List<Product>>> productOrFailureOption;
+  final Option<Either<Failure, DataProduct>> productOrFailureOption;
   @override
   final bool isLoading;
   @override
@@ -906,14 +906,14 @@ class _$_ProductState implements _ProductState {
 
 abstract class _ProductState implements ProductState {
   const factory _ProductState(
-      {required Option<Either<Failure, List<Product>>> productOrFailureOption,
-      required bool isLoading,
-      required bool isLoadMore,
-      required Option<Either<String, String>>
-          successOrFailureMessage}) = _$_ProductState;
+          {required Option<Either<Failure, DataProduct>> productOrFailureOption,
+          required bool isLoading,
+          required bool isLoadMore,
+          required Option<Either<String, String>> successOrFailureMessage}) =
+      _$_ProductState;
 
   @override
-  Option<Either<Failure, List<Product>>> get productOrFailureOption;
+  Option<Either<Failure, DataProduct>> get productOrFailureOption;
   @override
   bool get isLoading;
   @override

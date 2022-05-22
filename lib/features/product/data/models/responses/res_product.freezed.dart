@@ -24,7 +24,7 @@ class _$ResProductTearOff {
   _ResProduct call(
       {required List<ProductModel> products,
       required int total,
-      required String skip,
+      required dynamic skip,
       required int limit}) {
     return _ResProduct(
       products: products,
@@ -46,7 +46,7 @@ const $ResProduct = _$ResProductTearOff();
 mixin _$ResProduct {
   List<ProductModel> get products => throw _privateConstructorUsedError;
   int get total => throw _privateConstructorUsedError;
-  String get skip => throw _privateConstructorUsedError;
+  dynamic get skip => throw _privateConstructorUsedError;
   int get limit => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -60,7 +60,7 @@ abstract class $ResProductCopyWith<$Res> {
   factory $ResProductCopyWith(
           ResProduct value, $Res Function(ResProduct) then) =
       _$ResProductCopyWithImpl<$Res>;
-  $Res call({List<ProductModel> products, int total, String skip, int limit});
+  $Res call({List<ProductModel> products, int total, dynamic skip, int limit});
 }
 
 /// @nodoc
@@ -90,7 +90,7 @@ class _$ResProductCopyWithImpl<$Res> implements $ResProductCopyWith<$Res> {
       skip: skip == freezed
           ? _value.skip
           : skip // ignore: cast_nullable_to_non_nullable
-              as String,
+              as dynamic,
       limit: limit == freezed
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
@@ -105,7 +105,7 @@ abstract class _$ResProductCopyWith<$Res> implements $ResProductCopyWith<$Res> {
           _ResProduct value, $Res Function(_ResProduct) then) =
       __$ResProductCopyWithImpl<$Res>;
   @override
-  $Res call({List<ProductModel> products, int total, String skip, int limit});
+  $Res call({List<ProductModel> products, int total, dynamic skip, int limit});
 }
 
 /// @nodoc
@@ -137,7 +137,7 @@ class __$ResProductCopyWithImpl<$Res> extends _$ResProductCopyWithImpl<$Res>
       skip: skip == freezed
           ? _value.skip
           : skip // ignore: cast_nullable_to_non_nullable
-              as String,
+              as dynamic,
       limit: limit == freezed
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
@@ -163,7 +163,7 @@ class _$_ResProduct implements _ResProduct {
   @override
   final int total;
   @override
-  final String skip;
+  final dynamic skip;
   @override
   final int limit;
 
@@ -206,7 +206,7 @@ abstract class _ResProduct implements ResProduct {
   const factory _ResProduct(
       {required List<ProductModel> products,
       required int total,
-      required String skip,
+      required dynamic skip,
       required int limit}) = _$_ResProduct;
 
   factory _ResProduct.fromJson(Map<String, dynamic> json) =
@@ -217,7 +217,7 @@ abstract class _ResProduct implements ResProduct {
   @override
   int get total;
   @override
-  String get skip;
+  dynamic get skip;
   @override
   int get limit;
   @override

@@ -3,7 +3,7 @@ part of 'product_bloc.dart';
 @freezed
 class ProductState with _$ProductState {
   const factory ProductState({
-    required Option<Either<Failure, List<Product>>> productOrFailureOption,
+    required Option<Either<Failure, DataProduct>> productOrFailureOption,
     required bool isLoading,
     required bool isLoadMore,
     required Option<Either<String, String>> successOrFailureMessage,

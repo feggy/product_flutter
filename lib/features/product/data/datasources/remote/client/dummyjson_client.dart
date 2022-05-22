@@ -14,6 +14,6 @@ abstract class DummyJsonClient {
   @GET('products')
   Future<ResProduct> fetchProducts([
     @Query('limit') int limit = 10,
-    @Query('skip') int skip = 10,
+    @Query('skip') int skip = 0,
   ]);
 }

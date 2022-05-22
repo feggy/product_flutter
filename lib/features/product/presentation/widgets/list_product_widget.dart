@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:test_lime_commerce/features/product/domain/entities/product.dart';
@@ -15,6 +17,7 @@ class ListProductWidget extends StatefulWidget {
 
 class _ListProductWidgetState extends State<ListProductWidget> {
   int limitProduct = 10;
+  int totalProduct = 0;
   List<Product> products = [];
 
   @override
@@ -31,11 +34,13 @@ class _ListProductWidgetState extends State<ListProductWidget> {
                   failure.when(localFailure: (msg) {}, serverFailure: (msg) {}),
               (r) {
                 setState(() {
+                  totalProduct = r.total;
                   limitProduct += 10;
+                  log('>> $limitProduct');
                 });
                 products
                   ..clear()
-                  ..addAll(r);
+                  ..addAll(r.products);
               },
             ),
           );
@@ -95,7 +100,7 @@ class _ListProductWidgetState extends State<ListProductWidget> {
                     );
                   }
                 },
-                itemCount: products.length != 90
+                itemCount: products.length != totalProduct
                     ? products.length + 1
                     : products.length,
               );

@@ -14,7 +14,7 @@ class _DummyJsonClient implements DummyJsonClient {
   String? baseUrl;
 
   @override
-  Future<ResProduct> fetchProducts([limit = 10, skip = 10]) async {
+  Future<ResProduct> fetchProducts([limit = 10, skip = 0]) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'limit': limit, r'skip': skip};
     final _headers = <String, dynamic>{};

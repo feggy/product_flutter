@@ -5,6 +5,7 @@ import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:test_lime_commerce/core/domain/failures/failure.dart';
+import 'package:test_lime_commerce/features/product/domain/entities/data_product.dart';
 import 'package:test_lime_commerce/features/product/domain/entities/product.dart';
 import 'package:test_lime_commerce/features/product/domain/usecases/delete_saved_product.dart';
 import 'package:test_lime_commerce/features/product/domain/usecases/fetch_products.dart';
