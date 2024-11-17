@@ -125,3 +125,9 @@ app.*.map.json
 !.idea/codeStyles/
 !.idea/dictionaries/
 !.idea/runConfigurations/
+
+# Generated build runner file
+**.config.dart
+**.freezed.dart
+**.g.dart
+**.gen.dart
