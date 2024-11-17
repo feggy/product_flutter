@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'data_product.dart';
 
@@ -11,28 +12,7 @@ part of 'data_product.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$DataProductTearOff {
-  const _$DataProductTearOff();
-
-  _DataProduct call(
-      {required List<Product> products,
-      required int total,
-      required dynamic skip,
-      required int limit}) {
-    return _DataProduct(
-      products: products,
-      total: total,
-      skip: skip,
-      limit: limit,
-    );
-  }
-}
-
-/// @nodoc
-const $DataProduct = _$DataProductTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$DataProduct {
@@ -41,7 +21,9 @@ mixin _$DataProduct {
   dynamic get skip => throw _privateConstructorUsedError;
   int get limit => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DataProduct
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DataProductCopyWith<DataProduct> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,87 +32,95 @@ mixin _$DataProduct {
 abstract class $DataProductCopyWith<$Res> {
   factory $DataProductCopyWith(
           DataProduct value, $Res Function(DataProduct) then) =
-      _$DataProductCopyWithImpl<$Res>;
+      _$DataProductCopyWithImpl<$Res, DataProduct>;
+  @useResult
   $Res call({List<Product> products, int total, dynamic skip, int limit});
 }
 
 /// @nodoc
-class _$DataProductCopyWithImpl<$Res> implements $DataProductCopyWith<$Res> {
+class _$DataProductCopyWithImpl<$Res, $Val extends DataProduct>
+    implements $DataProductCopyWith<$Res> {
   _$DataProductCopyWithImpl(this._value, this._then);
 
-  final DataProduct _value;
   // ignore: unused_field
-  final $Res Function(DataProduct) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  /// Create a copy of DataProduct
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? products = freezed,
-    Object? total = freezed,
+    Object? products = null,
+    Object? total = null,
     Object? skip = freezed,
-    Object? limit = freezed,
+    Object? limit = null,
   }) {
     return _then(_value.copyWith(
-      products: products == freezed
+      products: null == products
           ? _value.products
           : products // ignore: cast_nullable_to_non_nullable
               as List<Product>,
-      total: total == freezed
+      total: null == total
           ? _value.total
           : total // ignore: cast_nullable_to_non_nullable
               as int,
-      skip: skip == freezed
+      skip: freezed == skip
           ? _value.skip
           : skip // ignore: cast_nullable_to_non_nullable
               as dynamic,
-      limit: limit == freezed
+      limit: null == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$DataProductCopyWith<$Res>
+abstract class _$$DataProductImplCopyWith<$Res>
     implements $DataProductCopyWith<$Res> {
-  factory _$DataProductCopyWith(
-          _DataProduct value, $Res Function(_DataProduct) then) =
-      __$DataProductCopyWithImpl<$Res>;
+  factory _$$DataProductImplCopyWith(
+          _$DataProductImpl value, $Res Function(_$DataProductImpl) then) =
+      __$$DataProductImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({List<Product> products, int total, dynamic skip, int limit});
 }
 
 /// @nodoc
-class __$DataProductCopyWithImpl<$Res> extends _$DataProductCopyWithImpl<$Res>
-    implements _$DataProductCopyWith<$Res> {
-  __$DataProductCopyWithImpl(
-      _DataProduct _value, $Res Function(_DataProduct) _then)
-      : super(_value, (v) => _then(v as _DataProduct));
+class __$$DataProductImplCopyWithImpl<$Res>
+    extends _$DataProductCopyWithImpl<$Res, _$DataProductImpl>
+    implements _$$DataProductImplCopyWith<$Res> {
+  __$$DataProductImplCopyWithImpl(
+      _$DataProductImpl _value, $Res Function(_$DataProductImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _DataProduct get _value => super._value as _DataProduct;
-
+  /// Create a copy of DataProduct
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? products = freezed,
-    Object? total = freezed,
+    Object? products = null,
+    Object? total = null,
     Object? skip = freezed,
-    Object? limit = freezed,
+    Object? limit = null,
   }) {
-    return _then(_DataProduct(
-      products: products == freezed
-          ? _value.products
+    return _then(_$DataProductImpl(
+      products: null == products
+          ? _value._products
           : products // ignore: cast_nullable_to_non_nullable
               as List<Product>,
-      total: total == freezed
+      total: null == total
           ? _value.total
           : total // ignore: cast_nullable_to_non_nullable
               as int,
-      skip: skip == freezed
+      skip: freezed == skip
           ? _value.skip
           : skip // ignore: cast_nullable_to_non_nullable
               as dynamic,
-      limit: limit == freezed
+      limit: null == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int,
@@ -140,15 +130,22 @@ class __$DataProductCopyWithImpl<$Res> extends _$DataProductCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_DataProduct implements _DataProduct {
-  const _$_DataProduct(
-      {required this.products,
+class _$DataProductImpl implements _DataProduct {
+  const _$DataProductImpl(
+      {required final List<Product> products,
       required this.total,
       required this.skip,
-      required this.limit});
+      required this.limit})
+      : _products = products;
 
+  final List<Product> _products;
   @override
-  final List<Product> products;
+  List<Product> get products {
+    if (_products is EqualUnmodifiableListView) return _products;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_products);
+  }
+
   @override
   final int total;
   @override
@@ -162,36 +159,39 @@ class _$_DataProduct implements _DataProduct {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _DataProduct &&
-            const DeepCollectionEquality().equals(other.products, products) &&
-            const DeepCollectionEquality().equals(other.total, total) &&
+            other is _$DataProductImpl &&
+            const DeepCollectionEquality().equals(other._products, _products) &&
+            (identical(other.total, total) || other.total == total) &&
             const DeepCollectionEquality().equals(other.skip, skip) &&
-            const DeepCollectionEquality().equals(other.limit, limit));
+            (identical(other.limit, limit) || other.limit == limit));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(products),
-      const DeepCollectionEquality().hash(total),
+      const DeepCollectionEquality().hash(_products),
+      total,
       const DeepCollectionEquality().hash(skip),
-      const DeepCollectionEquality().hash(limit));
+      limit);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DataProduct
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  _$DataProductCopyWith<_DataProduct> get copyWith =>
-      __$DataProductCopyWithImpl<_DataProduct>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$DataProductImplCopyWith<_$DataProductImpl> get copyWith =>
+      __$$DataProductImplCopyWithImpl<_$DataProductImpl>(this, _$identity);
 }
 
 abstract class _DataProduct implements DataProduct {
   const factory _DataProduct(
-      {required List<Product> products,
-      required int total,
-      required dynamic skip,
-      required int limit}) = _$_DataProduct;
+      {required final List<Product> products,
+      required final int total,
+      required final dynamic skip,
+      required final int limit}) = _$DataProductImpl;
 
   @override
   List<Product> get products;
@@ -201,8 +201,11 @@ abstract class _DataProduct implements DataProduct {
   dynamic get skip;
   @override
   int get limit;
+
+  /// Create a copy of DataProduct
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$DataProductCopyWith<_DataProduct> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$DataProductImplCopyWith<_$DataProductImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

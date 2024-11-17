@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'product.dart';
 
@@ -11,44 +12,7 @@ part of 'product.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$ProductTearOff {
-  const _$ProductTearOff();
-
-  _Product call(
-      {required int id,
-      required String title,
-      required String description,
-      required int price,
-      required double discountPercentage,
-      required double rating,
-      required int stock,
-      required String brand,
-      required String category,
-      required String thumbnail,
-      required List<String> images,
-      bool? isFavorite = false}) {
-    return _Product(
-      id: id,
-      title: title,
-      description: description,
-      price: price,
-      discountPercentage: discountPercentage,
-      rating: rating,
-      stock: stock,
-      brand: brand,
-      category: category,
-      thumbnail: thumbnail,
-      images: images,
-      isFavorite: isFavorite,
-    );
-  }
-}
-
-/// @nodoc
-const $Product = _$ProductTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$Product {
@@ -65,14 +29,17 @@ mixin _$Product {
   List<String> get images => throw _privateConstructorUsedError;
   bool? get isFavorite => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Product
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ProductCopyWith<Product> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ProductCopyWith<$Res> {
   factory $ProductCopyWith(Product value, $Res Function(Product) then) =
-      _$ProductCopyWithImpl<$Res>;
+      _$ProductCopyWithImpl<$Res, Product>;
+  @useResult
   $Res call(
       {int id,
       String title,
@@ -89,86 +56,93 @@ abstract class $ProductCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ProductCopyWithImpl<$Res> implements $ProductCopyWith<$Res> {
+class _$ProductCopyWithImpl<$Res, $Val extends Product>
+    implements $ProductCopyWith<$Res> {
   _$ProductCopyWithImpl(this._value, this._then);
 
-  final Product _value;
   // ignore: unused_field
-  final $Res Function(Product) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  /// Create a copy of Product
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? title = freezed,
-    Object? description = freezed,
-    Object? price = freezed,
-    Object? discountPercentage = freezed,
-    Object? rating = freezed,
-    Object? stock = freezed,
-    Object? brand = freezed,
-    Object? category = freezed,
-    Object? thumbnail = freezed,
-    Object? images = freezed,
+    Object? id = null,
+    Object? title = null,
+    Object? description = null,
+    Object? price = null,
+    Object? discountPercentage = null,
+    Object? rating = null,
+    Object? stock = null,
+    Object? brand = null,
+    Object? category = null,
+    Object? thumbnail = null,
+    Object? images = null,
     Object? isFavorite = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      title: title == freezed
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      description: description == freezed
+      description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
-      price: price == freezed
+      price: null == price
           ? _value.price
           : price // ignore: cast_nullable_to_non_nullable
               as int,
-      discountPercentage: discountPercentage == freezed
+      discountPercentage: null == discountPercentage
           ? _value.discountPercentage
           : discountPercentage // ignore: cast_nullable_to_non_nullable
               as double,
-      rating: rating == freezed
+      rating: null == rating
           ? _value.rating
           : rating // ignore: cast_nullable_to_non_nullable
               as double,
-      stock: stock == freezed
+      stock: null == stock
           ? _value.stock
           : stock // ignore: cast_nullable_to_non_nullable
               as int,
-      brand: brand == freezed
+      brand: null == brand
           ? _value.brand
           : brand // ignore: cast_nullable_to_non_nullable
               as String,
-      category: category == freezed
+      category: null == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
               as String,
-      thumbnail: thumbnail == freezed
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
               as String,
-      images: images == freezed
+      images: null == images
           ? _value.images
           : images // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      isFavorite: isFavorite == freezed
+      isFavorite: freezed == isFavorite
           ? _value.isFavorite
           : isFavorite // ignore: cast_nullable_to_non_nullable
               as bool?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$ProductCopyWith<$Res> implements $ProductCopyWith<$Res> {
-  factory _$ProductCopyWith(_Product value, $Res Function(_Product) then) =
-      __$ProductCopyWithImpl<$Res>;
+abstract class _$$ProductImplCopyWith<$Res> implements $ProductCopyWith<$Res> {
+  factory _$$ProductImplCopyWith(
+          _$ProductImpl value, $Res Function(_$ProductImpl) then) =
+      __$$ProductImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int id,
       String title,
@@ -185,75 +159,77 @@ abstract class _$ProductCopyWith<$Res> implements $ProductCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$ProductCopyWithImpl<$Res> extends _$ProductCopyWithImpl<$Res>
-    implements _$ProductCopyWith<$Res> {
-  __$ProductCopyWithImpl(_Product _value, $Res Function(_Product) _then)
-      : super(_value, (v) => _then(v as _Product));
+class __$$ProductImplCopyWithImpl<$Res>
+    extends _$ProductCopyWithImpl<$Res, _$ProductImpl>
+    implements _$$ProductImplCopyWith<$Res> {
+  __$$ProductImplCopyWithImpl(
+      _$ProductImpl _value, $Res Function(_$ProductImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _Product get _value => super._value as _Product;
-
+  /// Create a copy of Product
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? title = freezed,
-    Object? description = freezed,
-    Object? price = freezed,
-    Object? discountPercentage = freezed,
-    Object? rating = freezed,
-    Object? stock = freezed,
-    Object? brand = freezed,
-    Object? category = freezed,
-    Object? thumbnail = freezed,
-    Object? images = freezed,
+    Object? id = null,
+    Object? title = null,
+    Object? description = null,
+    Object? price = null,
+    Object? discountPercentage = null,
+    Object? rating = null,
+    Object? stock = null,
+    Object? brand = null,
+    Object? category = null,
+    Object? thumbnail = null,
+    Object? images = null,
     Object? isFavorite = freezed,
   }) {
-    return _then(_Product(
-      id: id == freezed
+    return _then(_$ProductImpl(
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      title: title == freezed
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      description: description == freezed
+      description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
-      price: price == freezed
+      price: null == price
           ? _value.price
           : price // ignore: cast_nullable_to_non_nullable
               as int,
-      discountPercentage: discountPercentage == freezed
+      discountPercentage: null == discountPercentage
           ? _value.discountPercentage
           : discountPercentage // ignore: cast_nullable_to_non_nullable
               as double,
-      rating: rating == freezed
+      rating: null == rating
           ? _value.rating
           : rating // ignore: cast_nullable_to_non_nullable
               as double,
-      stock: stock == freezed
+      stock: null == stock
           ? _value.stock
           : stock // ignore: cast_nullable_to_non_nullable
               as int,
-      brand: brand == freezed
+      brand: null == brand
           ? _value.brand
           : brand // ignore: cast_nullable_to_non_nullable
               as String,
-      category: category == freezed
+      category: null == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
               as String,
-      thumbnail: thumbnail == freezed
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
               as String,
-      images: images == freezed
-          ? _value.images
+      images: null == images
+          ? _value._images
           : images // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      isFavorite: isFavorite == freezed
+      isFavorite: freezed == isFavorite
           ? _value.isFavorite
           : isFavorite // ignore: cast_nullable_to_non_nullable
               as bool?,
@@ -263,8 +239,8 @@ class __$ProductCopyWithImpl<$Res> extends _$ProductCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Product implements _Product {
-  const _$_Product(
+class _$ProductImpl implements _Product {
+  const _$ProductImpl(
       {required this.id,
       required this.title,
       required this.description,
@@ -275,8 +251,9 @@ class _$_Product implements _Product {
       required this.brand,
       required this.category,
       required this.thumbnail,
-      required this.images,
-      this.isFavorite = false});
+      required final List<String> images,
+      this.isFavorite = false})
+      : _images = images;
 
   @override
   final int id;
@@ -298,10 +275,16 @@ class _$_Product implements _Product {
   final String category;
   @override
   final String thumbnail;
+  final List<String> _images;
   @override
-  final List<String> images;
+  List<String> get images {
+    if (_images is EqualUnmodifiableListView) return _images;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_images);
+  }
+
+  @override
   @JsonKey()
-  @override
   final bool? isFavorite;
 
   @override
@@ -310,63 +293,68 @@ class _$_Product implements _Product {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Product &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.title, title) &&
-            const DeepCollectionEquality()
-                .equals(other.description, description) &&
-            const DeepCollectionEquality().equals(other.price, price) &&
-            const DeepCollectionEquality()
-                .equals(other.discountPercentage, discountPercentage) &&
-            const DeepCollectionEquality().equals(other.rating, rating) &&
-            const DeepCollectionEquality().equals(other.stock, stock) &&
-            const DeepCollectionEquality().equals(other.brand, brand) &&
-            const DeepCollectionEquality().equals(other.category, category) &&
-            const DeepCollectionEquality().equals(other.thumbnail, thumbnail) &&
-            const DeepCollectionEquality().equals(other.images, images) &&
-            const DeepCollectionEquality()
-                .equals(other.isFavorite, isFavorite));
+            other is _$ProductImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.price, price) || other.price == price) &&
+            (identical(other.discountPercentage, discountPercentage) ||
+                other.discountPercentage == discountPercentage) &&
+            (identical(other.rating, rating) || other.rating == rating) &&
+            (identical(other.stock, stock) || other.stock == stock) &&
+            (identical(other.brand, brand) || other.brand == brand) &&
+            (identical(other.category, category) ||
+                other.category == category) &&
+            (identical(other.thumbnail, thumbnail) ||
+                other.thumbnail == thumbnail) &&
+            const DeepCollectionEquality().equals(other._images, _images) &&
+            (identical(other.isFavorite, isFavorite) ||
+                other.isFavorite == isFavorite));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(title),
-      const DeepCollectionEquality().hash(description),
-      const DeepCollectionEquality().hash(price),
-      const DeepCollectionEquality().hash(discountPercentage),
-      const DeepCollectionEquality().hash(rating),
-      const DeepCollectionEquality().hash(stock),
-      const DeepCollectionEquality().hash(brand),
-      const DeepCollectionEquality().hash(category),
-      const DeepCollectionEquality().hash(thumbnail),
-      const DeepCollectionEquality().hash(images),
-      const DeepCollectionEquality().hash(isFavorite));
+      id,
+      title,
+      description,
+      price,
+      discountPercentage,
+      rating,
+      stock,
+      brand,
+      category,
+      thumbnail,
+      const DeepCollectionEquality().hash(_images),
+      isFavorite);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Product
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  _$ProductCopyWith<_Product> get copyWith =>
-      __$ProductCopyWithImpl<_Product>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ProductImplCopyWith<_$ProductImpl> get copyWith =>
+      __$$ProductImplCopyWithImpl<_$ProductImpl>(this, _$identity);
 }
 
 abstract class _Product implements Product {
   const factory _Product(
-      {required int id,
-      required String title,
-      required String description,
-      required int price,
-      required double discountPercentage,
-      required double rating,
-      required int stock,
-      required String brand,
-      required String category,
-      required String thumbnail,
-      required List<String> images,
-      bool? isFavorite}) = _$_Product;
+      {required final int id,
+      required final String title,
+      required final String description,
+      required final int price,
+      required final double discountPercentage,
+      required final double rating,
+      required final int stock,
+      required final String brand,
+      required final String category,
+      required final String thumbnail,
+      required final List<String> images,
+      final bool? isFavorite}) = _$ProductImpl;
 
   @override
   int get id;
@@ -392,8 +380,11 @@ abstract class _Product implements Product {
   List<String> get images;
   @override
   bool? get isFavorite;
+
+  /// Create a copy of Product
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$ProductCopyWith<_Product> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ProductImplCopyWith<_$ProductImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

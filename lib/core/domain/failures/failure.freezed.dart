@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'failure.dart';
 
@@ -11,32 +12,11 @@ part of 'failure.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$FailureTearOff {
-  const _$FailureTearOff();
-
-  LocalFailure localFailure({required String message}) {
-    return LocalFailure(
-      message: message,
-    );
-  }
-
-  ServerFailure serverFailure({required String message}) {
-    return ServerFailure(
-      message: message,
-    );
-  }
-}
-
-/// @nodoc
-const $Failure = _$FailureTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$Failure {
   String get message => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String message) localFailure,
@@ -45,8 +25,8 @@ mixin _$Failure {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String message)? localFailure,
-    TResult Function(String message)? serverFailure,
+    TResult? Function(String message)? localFailure,
+    TResult? Function(String message)? serverFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -64,8 +44,8 @@ mixin _$Failure {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(LocalFailure value)? localFailure,
-    TResult Function(ServerFailure value)? serverFailure,
+    TResult? Function(LocalFailure value)? localFailure,
+    TResult? Function(ServerFailure value)? serverFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -76,63 +56,74 @@ mixin _$Failure {
   }) =>
       throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Failure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FailureCopyWith<Failure> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $FailureCopyWith<$Res> {
   factory $FailureCopyWith(Failure value, $Res Function(Failure) then) =
-      _$FailureCopyWithImpl<$Res>;
+      _$FailureCopyWithImpl<$Res, Failure>;
+  @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class _$FailureCopyWithImpl<$Res> implements $FailureCopyWith<$Res> {
+class _$FailureCopyWithImpl<$Res, $Val extends Failure>
+    implements $FailureCopyWith<$Res> {
   _$FailureCopyWithImpl(this._value, this._then);
 
-  final Failure _value;
   // ignore: unused_field
-  final $Res Function(Failure) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  /// Create a copy of Failure
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = freezed,
+    Object? message = null,
   }) {
     return _then(_value.copyWith(
-      message: message == freezed
+      message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class $LocalFailureCopyWith<$Res> implements $FailureCopyWith<$Res> {
-  factory $LocalFailureCopyWith(
-          LocalFailure value, $Res Function(LocalFailure) then) =
-      _$LocalFailureCopyWithImpl<$Res>;
+abstract class _$$LocalFailureImplCopyWith<$Res>
+    implements $FailureCopyWith<$Res> {
+  factory _$$LocalFailureImplCopyWith(
+          _$LocalFailureImpl value, $Res Function(_$LocalFailureImpl) then) =
+      __$$LocalFailureImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class _$LocalFailureCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
-    implements $LocalFailureCopyWith<$Res> {
-  _$LocalFailureCopyWithImpl(
-      LocalFailure _value, $Res Function(LocalFailure) _then)
-      : super(_value, (v) => _then(v as LocalFailure));
+class __$$LocalFailureImplCopyWithImpl<$Res>
+    extends _$FailureCopyWithImpl<$Res, _$LocalFailureImpl>
+    implements _$$LocalFailureImplCopyWith<$Res> {
+  __$$LocalFailureImplCopyWithImpl(
+      _$LocalFailureImpl _value, $Res Function(_$LocalFailureImpl) _then)
+      : super(_value, _then);
 
-  @override
-  LocalFailure get _value => super._value as LocalFailure;
-
+  /// Create a copy of Failure
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = freezed,
+    Object? message = null,
   }) {
-    return _then(LocalFailure(
-      message: message == freezed
+    return _then(_$LocalFailureImpl(
+      message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
@@ -142,8 +133,8 @@ class _$LocalFailureCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LocalFailure implements LocalFailure {
-  const _$LocalFailure({required this.message});
+class _$LocalFailureImpl implements LocalFailure {
+  const _$LocalFailureImpl({required this.message});
 
   @override
   final String message;
@@ -154,21 +145,23 @@ class _$LocalFailure implements LocalFailure {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is LocalFailure &&
-            const DeepCollectionEquality().equals(other.message, message));
+            other is _$LocalFailureImpl &&
+            (identical(other.message, message) || other.message == message));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
+  int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Failure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  $LocalFailureCopyWith<LocalFailure> get copyWith =>
-      _$LocalFailureCopyWithImpl<LocalFailure>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$LocalFailureImplCopyWith<_$LocalFailureImpl> get copyWith =>
+      __$$LocalFailureImplCopyWithImpl<_$LocalFailureImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -182,8 +175,8 @@ class _$LocalFailure implements LocalFailure {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String message)? localFailure,
-    TResult Function(String message)? serverFailure,
+    TResult? Function(String message)? localFailure,
+    TResult? Function(String message)? serverFailure,
   }) {
     return localFailure?.call(message);
   }
@@ -213,8 +206,8 @@ class _$LocalFailure implements LocalFailure {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(LocalFailure value)? localFailure,
-    TResult Function(ServerFailure value)? serverFailure,
+    TResult? Function(LocalFailure value)? localFailure,
+    TResult? Function(ServerFailure value)? serverFailure,
   }) {
     return localFailure?.call(this);
   }
@@ -234,41 +227,48 @@ class _$LocalFailure implements LocalFailure {
 }
 
 abstract class LocalFailure implements Failure {
-  const factory LocalFailure({required String message}) = _$LocalFailure;
+  const factory LocalFailure({required final String message}) =
+      _$LocalFailureImpl;
 
   @override
   String get message;
+
+  /// Create a copy of Failure
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  $LocalFailureCopyWith<LocalFailure> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$LocalFailureImplCopyWith<_$LocalFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ServerFailureCopyWith<$Res> implements $FailureCopyWith<$Res> {
-  factory $ServerFailureCopyWith(
-          ServerFailure value, $Res Function(ServerFailure) then) =
-      _$ServerFailureCopyWithImpl<$Res>;
+abstract class _$$ServerFailureImplCopyWith<$Res>
+    implements $FailureCopyWith<$Res> {
+  factory _$$ServerFailureImplCopyWith(
+          _$ServerFailureImpl value, $Res Function(_$ServerFailureImpl) then) =
+      __$$ServerFailureImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class _$ServerFailureCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
-    implements $ServerFailureCopyWith<$Res> {
-  _$ServerFailureCopyWithImpl(
-      ServerFailure _value, $Res Function(ServerFailure) _then)
-      : super(_value, (v) => _then(v as ServerFailure));
+class __$$ServerFailureImplCopyWithImpl<$Res>
+    extends _$FailureCopyWithImpl<$Res, _$ServerFailureImpl>
+    implements _$$ServerFailureImplCopyWith<$Res> {
+  __$$ServerFailureImplCopyWithImpl(
+      _$ServerFailureImpl _value, $Res Function(_$ServerFailureImpl) _then)
+      : super(_value, _then);
 
-  @override
-  ServerFailure get _value => super._value as ServerFailure;
-
+  /// Create a copy of Failure
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = freezed,
+    Object? message = null,
   }) {
-    return _then(ServerFailure(
-      message: message == freezed
+    return _then(_$ServerFailureImpl(
+      message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
@@ -278,8 +278,8 @@ class _$ServerFailureCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ServerFailure implements ServerFailure {
-  const _$ServerFailure({required this.message});
+class _$ServerFailureImpl implements ServerFailure {
+  const _$ServerFailureImpl({required this.message});
 
   @override
   final String message;
@@ -290,21 +290,23 @@ class _$ServerFailure implements ServerFailure {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is ServerFailure &&
-            const DeepCollectionEquality().equals(other.message, message));
+            other is _$ServerFailureImpl &&
+            (identical(other.message, message) || other.message == message));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
+  int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Failure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  $ServerFailureCopyWith<ServerFailure> get copyWith =>
-      _$ServerFailureCopyWithImpl<ServerFailure>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ServerFailureImplCopyWith<_$ServerFailureImpl> get copyWith =>
+      __$$ServerFailureImplCopyWithImpl<_$ServerFailureImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -318,8 +320,8 @@ class _$ServerFailure implements ServerFailure {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String message)? localFailure,
-    TResult Function(String message)? serverFailure,
+    TResult? Function(String message)? localFailure,
+    TResult? Function(String message)? serverFailure,
   }) {
     return serverFailure?.call(message);
   }
@@ -349,8 +351,8 @@ class _$ServerFailure implements ServerFailure {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(LocalFailure value)? localFailure,
-    TResult Function(ServerFailure value)? serverFailure,
+    TResult? Function(LocalFailure value)? localFailure,
+    TResult? Function(ServerFailure value)? serverFailure,
   }) {
     return serverFailure?.call(this);
   }
@@ -370,12 +372,16 @@ class _$ServerFailure implements ServerFailure {
 }
 
 abstract class ServerFailure implements Failure {
-  const factory ServerFailure({required String message}) = _$ServerFailure;
+  const factory ServerFailure({required final String message}) =
+      _$ServerFailureImpl;
 
   @override
   String get message;
+
+  /// Create a copy of Failure
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  $ServerFailureCopyWith<ServerFailure> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ServerFailureImplCopyWith<_$ServerFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

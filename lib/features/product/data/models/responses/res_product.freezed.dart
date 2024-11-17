@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'res_product.dart';
 
@@ -11,36 +12,11 @@ part of 'res_product.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ResProduct _$ResProductFromJson(Map<String, dynamic> json) {
   return _ResProduct.fromJson(json);
 }
-
-/// @nodoc
-class _$ResProductTearOff {
-  const _$ResProductTearOff();
-
-  _ResProduct call(
-      {required List<ProductModel> products,
-      required int total,
-      required dynamic skip,
-      required int limit}) {
-    return _ResProduct(
-      products: products,
-      total: total,
-      skip: skip,
-      limit: limit,
-    );
-  }
-
-  ResProduct fromJson(Map<String, Object?> json) {
-    return ResProduct.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ResProduct = _$ResProductTearOff();
 
 /// @nodoc
 mixin _$ResProduct {
@@ -49,8 +25,12 @@ mixin _$ResProduct {
   dynamic get skip => throw _privateConstructorUsedError;
   int get limit => throw _privateConstructorUsedError;
 
+  /// Serializes this ResProduct to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ResProduct
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ResProductCopyWith<ResProduct> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -59,86 +39,95 @@ mixin _$ResProduct {
 abstract class $ResProductCopyWith<$Res> {
   factory $ResProductCopyWith(
           ResProduct value, $Res Function(ResProduct) then) =
-      _$ResProductCopyWithImpl<$Res>;
+      _$ResProductCopyWithImpl<$Res, ResProduct>;
+  @useResult
   $Res call({List<ProductModel> products, int total, dynamic skip, int limit});
 }
 
 /// @nodoc
-class _$ResProductCopyWithImpl<$Res> implements $ResProductCopyWith<$Res> {
+class _$ResProductCopyWithImpl<$Res, $Val extends ResProduct>
+    implements $ResProductCopyWith<$Res> {
   _$ResProductCopyWithImpl(this._value, this._then);
 
-  final ResProduct _value;
   // ignore: unused_field
-  final $Res Function(ResProduct) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  /// Create a copy of ResProduct
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? products = freezed,
-    Object? total = freezed,
+    Object? products = null,
+    Object? total = null,
     Object? skip = freezed,
-    Object? limit = freezed,
+    Object? limit = null,
   }) {
     return _then(_value.copyWith(
-      products: products == freezed
+      products: null == products
           ? _value.products
           : products // ignore: cast_nullable_to_non_nullable
               as List<ProductModel>,
-      total: total == freezed
+      total: null == total
           ? _value.total
           : total // ignore: cast_nullable_to_non_nullable
               as int,
-      skip: skip == freezed
+      skip: freezed == skip
           ? _value.skip
           : skip // ignore: cast_nullable_to_non_nullable
               as dynamic,
-      limit: limit == freezed
+      limit: null == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$ResProductCopyWith<$Res> implements $ResProductCopyWith<$Res> {
-  factory _$ResProductCopyWith(
-          _ResProduct value, $Res Function(_ResProduct) then) =
-      __$ResProductCopyWithImpl<$Res>;
+abstract class _$$ResProductImplCopyWith<$Res>
+    implements $ResProductCopyWith<$Res> {
+  factory _$$ResProductImplCopyWith(
+          _$ResProductImpl value, $Res Function(_$ResProductImpl) then) =
+      __$$ResProductImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({List<ProductModel> products, int total, dynamic skip, int limit});
 }
 
 /// @nodoc
-class __$ResProductCopyWithImpl<$Res> extends _$ResProductCopyWithImpl<$Res>
-    implements _$ResProductCopyWith<$Res> {
-  __$ResProductCopyWithImpl(
-      _ResProduct _value, $Res Function(_ResProduct) _then)
-      : super(_value, (v) => _then(v as _ResProduct));
+class __$$ResProductImplCopyWithImpl<$Res>
+    extends _$ResProductCopyWithImpl<$Res, _$ResProductImpl>
+    implements _$$ResProductImplCopyWith<$Res> {
+  __$$ResProductImplCopyWithImpl(
+      _$ResProductImpl _value, $Res Function(_$ResProductImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _ResProduct get _value => super._value as _ResProduct;
-
+  /// Create a copy of ResProduct
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? products = freezed,
-    Object? total = freezed,
+    Object? products = null,
+    Object? total = null,
     Object? skip = freezed,
-    Object? limit = freezed,
+    Object? limit = null,
   }) {
-    return _then(_ResProduct(
-      products: products == freezed
-          ? _value.products
+    return _then(_$ResProductImpl(
+      products: null == products
+          ? _value._products
           : products // ignore: cast_nullable_to_non_nullable
               as List<ProductModel>,
-      total: total == freezed
+      total: null == total
           ? _value.total
           : total // ignore: cast_nullable_to_non_nullable
               as int,
-      skip: skip == freezed
+      skip: freezed == skip
           ? _value.skip
           : skip // ignore: cast_nullable_to_non_nullable
               as dynamic,
-      limit: limit == freezed
+      limit: null == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int,
@@ -148,18 +137,25 @@ class __$ResProductCopyWithImpl<$Res> extends _$ResProductCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ResProduct implements _ResProduct {
-  const _$_ResProduct(
-      {required this.products,
+class _$ResProductImpl implements _ResProduct {
+  const _$ResProductImpl(
+      {required final List<ProductModel> products,
       required this.total,
       required this.skip,
-      required this.limit});
+      required this.limit})
+      : _products = products;
 
-  factory _$_ResProduct.fromJson(Map<String, dynamic> json) =>
-      _$$_ResProductFromJson(json);
+  factory _$ResProductImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ResProductImplFromJson(json);
 
+  final List<ProductModel> _products;
   @override
-  final List<ProductModel> products;
+  List<ProductModel> get products {
+    if (_products is EqualUnmodifiableListView) return _products;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_products);
+  }
+
   @override
   final int total;
   @override
@@ -173,44 +169,50 @@ class _$_ResProduct implements _ResProduct {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ResProduct &&
-            const DeepCollectionEquality().equals(other.products, products) &&
-            const DeepCollectionEquality().equals(other.total, total) &&
+            other is _$ResProductImpl &&
+            const DeepCollectionEquality().equals(other._products, _products) &&
+            (identical(other.total, total) || other.total == total) &&
             const DeepCollectionEquality().equals(other.skip, skip) &&
-            const DeepCollectionEquality().equals(other.limit, limit));
+            (identical(other.limit, limit) || other.limit == limit));
   }
 
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(products),
-      const DeepCollectionEquality().hash(total),
+      const DeepCollectionEquality().hash(_products),
+      total,
       const DeepCollectionEquality().hash(skip),
-      const DeepCollectionEquality().hash(limit));
+      limit);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ResProduct
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  _$ResProductCopyWith<_ResProduct> get copyWith =>
-      __$ResProductCopyWithImpl<_ResProduct>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ResProductImplCopyWith<_$ResProductImpl> get copyWith =>
+      __$$ResProductImplCopyWithImpl<_$ResProductImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResProductToJson(this);
+    return _$$ResProductImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _ResProduct implements ResProduct {
   const factory _ResProduct(
-      {required List<ProductModel> products,
-      required int total,
-      required dynamic skip,
-      required int limit}) = _$_ResProduct;
+      {required final List<ProductModel> products,
+      required final int total,
+      required final dynamic skip,
+      required final int limit}) = _$ResProductImpl;
 
   factory _ResProduct.fromJson(Map<String, dynamic> json) =
-      _$_ResProduct.fromJson;
+      _$ResProductImpl.fromJson;
 
   @override
   List<ProductModel> get products;
@@ -220,54 +222,18 @@ abstract class _ResProduct implements ResProduct {
   dynamic get skip;
   @override
   int get limit;
+
+  /// Create a copy of ResProduct
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$ResProductCopyWith<_ResProduct> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ResProductImplCopyWith<_$ResProductImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 ProductModel _$ProductModelFromJson(Map<String, dynamic> json) {
   return _ProductModel.fromJson(json);
 }
-
-/// @nodoc
-class _$ProductModelTearOff {
-  const _$ProductModelTearOff();
-
-  _ProductModel call(
-      {required int id,
-      required String title,
-      required String description,
-      required int price,
-      required double discountPercentage,
-      required double rating,
-      required int stock,
-      required String brand,
-      required String category,
-      required String thumbnail,
-      required List<String> images}) {
-    return _ProductModel(
-      id: id,
-      title: title,
-      description: description,
-      price: price,
-      discountPercentage: discountPercentage,
-      rating: rating,
-      stock: stock,
-      brand: brand,
-      category: category,
-      thumbnail: thumbnail,
-      images: images,
-    );
-  }
-
-  ProductModel fromJson(Map<String, Object?> json) {
-    return ProductModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ProductModel = _$ProductModelTearOff();
 
 /// @nodoc
 mixin _$ProductModel {
@@ -283,8 +249,12 @@ mixin _$ProductModel {
   String get thumbnail => throw _privateConstructorUsedError;
   List<String> get images => throw _privateConstructorUsedError;
 
+  /// Serializes this ProductModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ProductModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ProductModelCopyWith<ProductModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -293,7 +263,8 @@ mixin _$ProductModel {
 abstract class $ProductModelCopyWith<$Res> {
   factory $ProductModelCopyWith(
           ProductModel value, $Res Function(ProductModel) then) =
-      _$ProductModelCopyWithImpl<$Res>;
+      _$ProductModelCopyWithImpl<$Res, ProductModel>;
+  @useResult
   $Res call(
       {int id,
       String title,
@@ -309,83 +280,89 @@ abstract class $ProductModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ProductModelCopyWithImpl<$Res> implements $ProductModelCopyWith<$Res> {
+class _$ProductModelCopyWithImpl<$Res, $Val extends ProductModel>
+    implements $ProductModelCopyWith<$Res> {
   _$ProductModelCopyWithImpl(this._value, this._then);
 
-  final ProductModel _value;
   // ignore: unused_field
-  final $Res Function(ProductModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  /// Create a copy of ProductModel
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? title = freezed,
-    Object? description = freezed,
-    Object? price = freezed,
-    Object? discountPercentage = freezed,
-    Object? rating = freezed,
-    Object? stock = freezed,
-    Object? brand = freezed,
-    Object? category = freezed,
-    Object? thumbnail = freezed,
-    Object? images = freezed,
+    Object? id = null,
+    Object? title = null,
+    Object? description = null,
+    Object? price = null,
+    Object? discountPercentage = null,
+    Object? rating = null,
+    Object? stock = null,
+    Object? brand = null,
+    Object? category = null,
+    Object? thumbnail = null,
+    Object? images = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      title: title == freezed
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      description: description == freezed
+      description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
-      price: price == freezed
+      price: null == price
           ? _value.price
           : price // ignore: cast_nullable_to_non_nullable
               as int,
-      discountPercentage: discountPercentage == freezed
+      discountPercentage: null == discountPercentage
           ? _value.discountPercentage
           : discountPercentage // ignore: cast_nullable_to_non_nullable
               as double,
-      rating: rating == freezed
+      rating: null == rating
           ? _value.rating
           : rating // ignore: cast_nullable_to_non_nullable
               as double,
-      stock: stock == freezed
+      stock: null == stock
           ? _value.stock
           : stock // ignore: cast_nullable_to_non_nullable
               as int,
-      brand: brand == freezed
+      brand: null == brand
           ? _value.brand
           : brand // ignore: cast_nullable_to_non_nullable
               as String,
-      category: category == freezed
+      category: null == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
               as String,
-      thumbnail: thumbnail == freezed
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
               as String,
-      images: images == freezed
+      images: null == images
           ? _value.images
           : images // ignore: cast_nullable_to_non_nullable
               as List<String>,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$ProductModelCopyWith<$Res>
+abstract class _$$ProductModelImplCopyWith<$Res>
     implements $ProductModelCopyWith<$Res> {
-  factory _$ProductModelCopyWith(
-          _ProductModel value, $Res Function(_ProductModel) then) =
-      __$ProductModelCopyWithImpl<$Res>;
+  factory _$$ProductModelImplCopyWith(
+          _$ProductModelImpl value, $Res Function(_$ProductModelImpl) then) =
+      __$$ProductModelImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int id,
       String title,
@@ -401,72 +378,73 @@ abstract class _$ProductModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ProductModelCopyWithImpl<$Res> extends _$ProductModelCopyWithImpl<$Res>
-    implements _$ProductModelCopyWith<$Res> {
-  __$ProductModelCopyWithImpl(
-      _ProductModel _value, $Res Function(_ProductModel) _then)
-      : super(_value, (v) => _then(v as _ProductModel));
+class __$$ProductModelImplCopyWithImpl<$Res>
+    extends _$ProductModelCopyWithImpl<$Res, _$ProductModelImpl>
+    implements _$$ProductModelImplCopyWith<$Res> {
+  __$$ProductModelImplCopyWithImpl(
+      _$ProductModelImpl _value, $Res Function(_$ProductModelImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _ProductModel get _value => super._value as _ProductModel;
-
+  /// Create a copy of ProductModel
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? title = freezed,
-    Object? description = freezed,
-    Object? price = freezed,
-    Object? discountPercentage = freezed,
-    Object? rating = freezed,
-    Object? stock = freezed,
-    Object? brand = freezed,
-    Object? category = freezed,
-    Object? thumbnail = freezed,
-    Object? images = freezed,
+    Object? id = null,
+    Object? title = null,
+    Object? description = null,
+    Object? price = null,
+    Object? discountPercentage = null,
+    Object? rating = null,
+    Object? stock = null,
+    Object? brand = null,
+    Object? category = null,
+    Object? thumbnail = null,
+    Object? images = null,
   }) {
-    return _then(_ProductModel(
-      id: id == freezed
+    return _then(_$ProductModelImpl(
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      title: title == freezed
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      description: description == freezed
+      description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
-      price: price == freezed
+      price: null == price
           ? _value.price
           : price // ignore: cast_nullable_to_non_nullable
               as int,
-      discountPercentage: discountPercentage == freezed
+      discountPercentage: null == discountPercentage
           ? _value.discountPercentage
           : discountPercentage // ignore: cast_nullable_to_non_nullable
               as double,
-      rating: rating == freezed
+      rating: null == rating
           ? _value.rating
           : rating // ignore: cast_nullable_to_non_nullable
               as double,
-      stock: stock == freezed
+      stock: null == stock
           ? _value.stock
           : stock // ignore: cast_nullable_to_non_nullable
               as int,
-      brand: brand == freezed
+      brand: null == brand
           ? _value.brand
           : brand // ignore: cast_nullable_to_non_nullable
               as String,
-      category: category == freezed
+      category: null == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
               as String,
-      thumbnail: thumbnail == freezed
+      thumbnail: null == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
               as String,
-      images: images == freezed
-          ? _value.images
+      images: null == images
+          ? _value._images
           : images // ignore: cast_nullable_to_non_nullable
               as List<String>,
     ));
@@ -475,8 +453,8 @@ class __$ProductModelCopyWithImpl<$Res> extends _$ProductModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ProductModel implements _ProductModel {
-  const _$_ProductModel(
+class _$ProductModelImpl implements _ProductModel {
+  const _$ProductModelImpl(
       {required this.id,
       required this.title,
       required this.description,
@@ -487,10 +465,11 @@ class _$_ProductModel implements _ProductModel {
       required this.brand,
       required this.category,
       required this.thumbnail,
-      required this.images});
+      required final List<String> images})
+      : _images = images;
 
-  factory _$_ProductModel.fromJson(Map<String, dynamic> json) =>
-      _$$_ProductModelFromJson(json);
+  factory _$ProductModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ProductModelImplFromJson(json);
 
   @override
   final int id;
@@ -512,8 +491,13 @@ class _$_ProductModel implements _ProductModel {
   final String category;
   @override
   final String thumbnail;
+  final List<String> _images;
   @override
-  final List<String> images;
+  List<String> get images {
+    if (_images is EqualUnmodifiableListView) return _images;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_images);
+  }
 
   @override
   String toString() {
@@ -521,67 +505,75 @@ class _$_ProductModel implements _ProductModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ProductModel &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.title, title) &&
-            const DeepCollectionEquality()
-                .equals(other.description, description) &&
-            const DeepCollectionEquality().equals(other.price, price) &&
-            const DeepCollectionEquality()
-                .equals(other.discountPercentage, discountPercentage) &&
-            const DeepCollectionEquality().equals(other.rating, rating) &&
-            const DeepCollectionEquality().equals(other.stock, stock) &&
-            const DeepCollectionEquality().equals(other.brand, brand) &&
-            const DeepCollectionEquality().equals(other.category, category) &&
-            const DeepCollectionEquality().equals(other.thumbnail, thumbnail) &&
-            const DeepCollectionEquality().equals(other.images, images));
+            other is _$ProductModelImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.price, price) || other.price == price) &&
+            (identical(other.discountPercentage, discountPercentage) ||
+                other.discountPercentage == discountPercentage) &&
+            (identical(other.rating, rating) || other.rating == rating) &&
+            (identical(other.stock, stock) || other.stock == stock) &&
+            (identical(other.brand, brand) || other.brand == brand) &&
+            (identical(other.category, category) ||
+                other.category == category) &&
+            (identical(other.thumbnail, thumbnail) ||
+                other.thumbnail == thumbnail) &&
+            const DeepCollectionEquality().equals(other._images, _images));
   }
 
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(title),
-      const DeepCollectionEquality().hash(description),
-      const DeepCollectionEquality().hash(price),
-      const DeepCollectionEquality().hash(discountPercentage),
-      const DeepCollectionEquality().hash(rating),
-      const DeepCollectionEquality().hash(stock),
-      const DeepCollectionEquality().hash(brand),
-      const DeepCollectionEquality().hash(category),
-      const DeepCollectionEquality().hash(thumbnail),
-      const DeepCollectionEquality().hash(images));
+      id,
+      title,
+      description,
+      price,
+      discountPercentage,
+      rating,
+      stock,
+      brand,
+      category,
+      thumbnail,
+      const DeepCollectionEquality().hash(_images));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ProductModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  _$ProductModelCopyWith<_ProductModel> get copyWith =>
-      __$ProductModelCopyWithImpl<_ProductModel>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ProductModelImplCopyWith<_$ProductModelImpl> get copyWith =>
+      __$$ProductModelImplCopyWithImpl<_$ProductModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProductModelToJson(this);
+    return _$$ProductModelImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _ProductModel implements ProductModel {
   const factory _ProductModel(
-      {required int id,
-      required String title,
-      required String description,
-      required int price,
-      required double discountPercentage,
-      required double rating,
-      required int stock,
-      required String brand,
-      required String category,
-      required String thumbnail,
-      required List<String> images}) = _$_ProductModel;
+      {required final int id,
+      required final String title,
+      required final String description,
+      required final int price,
+      required final double discountPercentage,
+      required final double rating,
+      required final int stock,
+      required final String brand,
+      required final String category,
+      required final String thumbnail,
+      required final List<String> images}) = _$ProductModelImpl;
 
   factory _ProductModel.fromJson(Map<String, dynamic> json) =
-      _$_ProductModel.fromJson;
+      _$ProductModelImpl.fromJson;
 
   @override
   int get id;
@@ -605,8 +597,11 @@ abstract class _ProductModel implements ProductModel {
   String get thumbnail;
   @override
   List<String> get images;
+
+  /// Create a copy of ProductModel
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$ProductModelCopyWith<_ProductModel> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ProductModelImplCopyWith<_$ProductModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

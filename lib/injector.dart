@@ -6,4 +6,4 @@ final getIt = GetIt.instance;
 
 @InjectableInit(preferRelativeImports: false, generateForDir: ['lib', 'test'])
 Future<void> configureDependencies(String environment) async =>
-    $initGetIt(getIt, environment: environment);
+    getIt.init(environment: environment);

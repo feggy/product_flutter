@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'product_bloc.dart';
 
@@ -11,39 +12,7 @@ part of 'product_bloc.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$ProductEventTearOff {
-  const _$ProductEventTearOff();
-
-  _FetchProductsEvent fetchProduct(int limit) {
-    return _FetchProductsEvent(
-      limit,
-    );
-  }
-
-  _LoadMoreEvent loadMore(int limit) {
-    return _LoadMoreEvent(
-      limit,
-    );
-  }
-
-  _SaveFavoriteEvent saveFavorite(Product product) {
-    return _SaveFavoriteEvent(
-      product,
-    );
-  }
-
-  _DeleteFavoriteEvent deleteFavorite(Product product) {
-    return _DeleteFavoriteEvent(
-      product,
-    );
-  }
-}
-
-/// @nodoc
-const $ProductEvent = _$ProductEventTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$ProductEvent {
@@ -57,10 +26,10 @@ mixin _$ProductEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(int limit)? fetchProduct,
-    TResult Function(int limit)? loadMore,
-    TResult Function(Product product)? saveFavorite,
-    TResult Function(Product product)? deleteFavorite,
+    TResult? Function(int limit)? fetchProduct,
+    TResult? Function(int limit)? loadMore,
+    TResult? Function(Product product)? saveFavorite,
+    TResult? Function(Product product)? deleteFavorite,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -82,10 +51,10 @@ mixin _$ProductEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_FetchProductsEvent value)? fetchProduct,
-    TResult Function(_LoadMoreEvent value)? loadMore,
-    TResult Function(_SaveFavoriteEvent value)? saveFavorite,
-    TResult Function(_DeleteFavoriteEvent value)? deleteFavorite,
+    TResult? Function(_FetchProductsEvent value)? fetchProduct,
+    TResult? Function(_LoadMoreEvent value)? loadMore,
+    TResult? Function(_SaveFavoriteEvent value)? saveFavorite,
+    TResult? Function(_DeleteFavoriteEvent value)? deleteFavorite,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -103,43 +72,49 @@ mixin _$ProductEvent {
 abstract class $ProductEventCopyWith<$Res> {
   factory $ProductEventCopyWith(
           ProductEvent value, $Res Function(ProductEvent) then) =
-      _$ProductEventCopyWithImpl<$Res>;
+      _$ProductEventCopyWithImpl<$Res, ProductEvent>;
 }
 
 /// @nodoc
-class _$ProductEventCopyWithImpl<$Res> implements $ProductEventCopyWith<$Res> {
+class _$ProductEventCopyWithImpl<$Res, $Val extends ProductEvent>
+    implements $ProductEventCopyWith<$Res> {
   _$ProductEventCopyWithImpl(this._value, this._then);
 
-  final ProductEvent _value;
   // ignore: unused_field
-  final $Res Function(ProductEvent) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of ProductEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$FetchProductsEventCopyWith<$Res> {
-  factory _$FetchProductsEventCopyWith(
-          _FetchProductsEvent value, $Res Function(_FetchProductsEvent) then) =
-      __$FetchProductsEventCopyWithImpl<$Res>;
+abstract class _$$FetchProductsEventImplCopyWith<$Res> {
+  factory _$$FetchProductsEventImplCopyWith(_$FetchProductsEventImpl value,
+          $Res Function(_$FetchProductsEventImpl) then) =
+      __$$FetchProductsEventImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({int limit});
 }
 
 /// @nodoc
-class __$FetchProductsEventCopyWithImpl<$Res>
-    extends _$ProductEventCopyWithImpl<$Res>
-    implements _$FetchProductsEventCopyWith<$Res> {
-  __$FetchProductsEventCopyWithImpl(
-      _FetchProductsEvent _value, $Res Function(_FetchProductsEvent) _then)
-      : super(_value, (v) => _then(v as _FetchProductsEvent));
+class __$$FetchProductsEventImplCopyWithImpl<$Res>
+    extends _$ProductEventCopyWithImpl<$Res, _$FetchProductsEventImpl>
+    implements _$$FetchProductsEventImplCopyWith<$Res> {
+  __$$FetchProductsEventImplCopyWithImpl(_$FetchProductsEventImpl _value,
+      $Res Function(_$FetchProductsEventImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _FetchProductsEvent get _value => super._value as _FetchProductsEvent;
-
+  /// Create a copy of ProductEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? limit = freezed,
+    Object? limit = null,
   }) {
-    return _then(_FetchProductsEvent(
-      limit == freezed
+    return _then(_$FetchProductsEventImpl(
+      null == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int,
@@ -149,8 +124,8 @@ class __$FetchProductsEventCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FetchProductsEvent implements _FetchProductsEvent {
-  const _$_FetchProductsEvent(this.limit);
+class _$FetchProductsEventImpl implements _FetchProductsEvent {
+  const _$FetchProductsEventImpl(this.limit);
 
   @override
   final int limit;
@@ -161,21 +136,24 @@ class _$_FetchProductsEvent implements _FetchProductsEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _FetchProductsEvent &&
-            const DeepCollectionEquality().equals(other.limit, limit));
+            other is _$FetchProductsEventImpl &&
+            (identical(other.limit, limit) || other.limit == limit));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(limit));
+  int get hashCode => Object.hash(runtimeType, limit);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ProductEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  _$FetchProductsEventCopyWith<_FetchProductsEvent> get copyWith =>
-      __$FetchProductsEventCopyWithImpl<_FetchProductsEvent>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$FetchProductsEventImplCopyWith<_$FetchProductsEventImpl> get copyWith =>
+      __$$FetchProductsEventImplCopyWithImpl<_$FetchProductsEventImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -191,10 +169,10 @@ class _$_FetchProductsEvent implements _FetchProductsEvent {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(int limit)? fetchProduct,
-    TResult Function(int limit)? loadMore,
-    TResult Function(Product product)? saveFavorite,
-    TResult Function(Product product)? deleteFavorite,
+    TResult? Function(int limit)? fetchProduct,
+    TResult? Function(int limit)? loadMore,
+    TResult? Function(Product product)? saveFavorite,
+    TResult? Function(Product product)? deleteFavorite,
   }) {
     return fetchProduct?.call(limit);
   }
@@ -228,10 +206,10 @@ class _$_FetchProductsEvent implements _FetchProductsEvent {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_FetchProductsEvent value)? fetchProduct,
-    TResult Function(_LoadMoreEvent value)? loadMore,
-    TResult Function(_SaveFavoriteEvent value)? saveFavorite,
-    TResult Function(_DeleteFavoriteEvent value)? deleteFavorite,
+    TResult? Function(_FetchProductsEvent value)? fetchProduct,
+    TResult? Function(_LoadMoreEvent value)? loadMore,
+    TResult? Function(_SaveFavoriteEvent value)? saveFavorite,
+    TResult? Function(_DeleteFavoriteEvent value)? deleteFavorite,
   }) {
     return fetchProduct?.call(this);
   }
@@ -253,39 +231,43 @@ class _$_FetchProductsEvent implements _FetchProductsEvent {
 }
 
 abstract class _FetchProductsEvent implements ProductEvent {
-  const factory _FetchProductsEvent(int limit) = _$_FetchProductsEvent;
+  const factory _FetchProductsEvent(final int limit) = _$FetchProductsEventImpl;
 
   int get limit;
-  @JsonKey(ignore: true)
-  _$FetchProductsEventCopyWith<_FetchProductsEvent> get copyWith =>
+
+  /// Create a copy of ProductEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FetchProductsEventImplCopyWith<_$FetchProductsEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$LoadMoreEventCopyWith<$Res> {
-  factory _$LoadMoreEventCopyWith(
-          _LoadMoreEvent value, $Res Function(_LoadMoreEvent) then) =
-      __$LoadMoreEventCopyWithImpl<$Res>;
+abstract class _$$LoadMoreEventImplCopyWith<$Res> {
+  factory _$$LoadMoreEventImplCopyWith(
+          _$LoadMoreEventImpl value, $Res Function(_$LoadMoreEventImpl) then) =
+      __$$LoadMoreEventImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({int limit});
 }
 
 /// @nodoc
-class __$LoadMoreEventCopyWithImpl<$Res>
-    extends _$ProductEventCopyWithImpl<$Res>
-    implements _$LoadMoreEventCopyWith<$Res> {
-  __$LoadMoreEventCopyWithImpl(
-      _LoadMoreEvent _value, $Res Function(_LoadMoreEvent) _then)
-      : super(_value, (v) => _then(v as _LoadMoreEvent));
+class __$$LoadMoreEventImplCopyWithImpl<$Res>
+    extends _$ProductEventCopyWithImpl<$Res, _$LoadMoreEventImpl>
+    implements _$$LoadMoreEventImplCopyWith<$Res> {
+  __$$LoadMoreEventImplCopyWithImpl(
+      _$LoadMoreEventImpl _value, $Res Function(_$LoadMoreEventImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _LoadMoreEvent get _value => super._value as _LoadMoreEvent;
-
+  /// Create a copy of ProductEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? limit = freezed,
+    Object? limit = null,
   }) {
-    return _then(_LoadMoreEvent(
-      limit == freezed
+    return _then(_$LoadMoreEventImpl(
+      null == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int,
@@ -295,8 +277,8 @@ class __$LoadMoreEventCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_LoadMoreEvent implements _LoadMoreEvent {
-  const _$_LoadMoreEvent(this.limit);
+class _$LoadMoreEventImpl implements _LoadMoreEvent {
+  const _$LoadMoreEventImpl(this.limit);
 
   @override
   final int limit;
@@ -307,21 +289,23 @@ class _$_LoadMoreEvent implements _LoadMoreEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _LoadMoreEvent &&
-            const DeepCollectionEquality().equals(other.limit, limit));
+            other is _$LoadMoreEventImpl &&
+            (identical(other.limit, limit) || other.limit == limit));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(limit));
+  int get hashCode => Object.hash(runtimeType, limit);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ProductEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  _$LoadMoreEventCopyWith<_LoadMoreEvent> get copyWith =>
-      __$LoadMoreEventCopyWithImpl<_LoadMoreEvent>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$LoadMoreEventImplCopyWith<_$LoadMoreEventImpl> get copyWith =>
+      __$$LoadMoreEventImplCopyWithImpl<_$LoadMoreEventImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -337,10 +321,10 @@ class _$_LoadMoreEvent implements _LoadMoreEvent {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(int limit)? fetchProduct,
-    TResult Function(int limit)? loadMore,
-    TResult Function(Product product)? saveFavorite,
-    TResult Function(Product product)? deleteFavorite,
+    TResult? Function(int limit)? fetchProduct,
+    TResult? Function(int limit)? loadMore,
+    TResult? Function(Product product)? saveFavorite,
+    TResult? Function(Product product)? deleteFavorite,
   }) {
     return loadMore?.call(limit);
   }
@@ -374,10 +358,10 @@ class _$_LoadMoreEvent implements _LoadMoreEvent {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_FetchProductsEvent value)? fetchProduct,
-    TResult Function(_LoadMoreEvent value)? loadMore,
-    TResult Function(_SaveFavoriteEvent value)? saveFavorite,
-    TResult Function(_DeleteFavoriteEvent value)? deleteFavorite,
+    TResult? Function(_FetchProductsEvent value)? fetchProduct,
+    TResult? Function(_LoadMoreEvent value)? loadMore,
+    TResult? Function(_SaveFavoriteEvent value)? saveFavorite,
+    TResult? Function(_DeleteFavoriteEvent value)? deleteFavorite,
   }) {
     return loadMore?.call(this);
   }
@@ -399,48 +383,55 @@ class _$_LoadMoreEvent implements _LoadMoreEvent {
 }
 
 abstract class _LoadMoreEvent implements ProductEvent {
-  const factory _LoadMoreEvent(int limit) = _$_LoadMoreEvent;
+  const factory _LoadMoreEvent(final int limit) = _$LoadMoreEventImpl;
 
   int get limit;
-  @JsonKey(ignore: true)
-  _$LoadMoreEventCopyWith<_LoadMoreEvent> get copyWith =>
+
+  /// Create a copy of ProductEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$LoadMoreEventImplCopyWith<_$LoadMoreEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$SaveFavoriteEventCopyWith<$Res> {
-  factory _$SaveFavoriteEventCopyWith(
-          _SaveFavoriteEvent value, $Res Function(_SaveFavoriteEvent) then) =
-      __$SaveFavoriteEventCopyWithImpl<$Res>;
+abstract class _$$SaveFavoriteEventImplCopyWith<$Res> {
+  factory _$$SaveFavoriteEventImplCopyWith(_$SaveFavoriteEventImpl value,
+          $Res Function(_$SaveFavoriteEventImpl) then) =
+      __$$SaveFavoriteEventImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({Product product});
 
   $ProductCopyWith<$Res> get product;
 }
 
 /// @nodoc
-class __$SaveFavoriteEventCopyWithImpl<$Res>
-    extends _$ProductEventCopyWithImpl<$Res>
-    implements _$SaveFavoriteEventCopyWith<$Res> {
-  __$SaveFavoriteEventCopyWithImpl(
-      _SaveFavoriteEvent _value, $Res Function(_SaveFavoriteEvent) _then)
-      : super(_value, (v) => _then(v as _SaveFavoriteEvent));
+class __$$SaveFavoriteEventImplCopyWithImpl<$Res>
+    extends _$ProductEventCopyWithImpl<$Res, _$SaveFavoriteEventImpl>
+    implements _$$SaveFavoriteEventImplCopyWith<$Res> {
+  __$$SaveFavoriteEventImplCopyWithImpl(_$SaveFavoriteEventImpl _value,
+      $Res Function(_$SaveFavoriteEventImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _SaveFavoriteEvent get _value => super._value as _SaveFavoriteEvent;
-
+  /// Create a copy of ProductEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? product = freezed,
+    Object? product = null,
   }) {
-    return _then(_SaveFavoriteEvent(
-      product == freezed
+    return _then(_$SaveFavoriteEventImpl(
+      null == product
           ? _value.product
           : product // ignore: cast_nullable_to_non_nullable
               as Product,
     ));
   }
 
+  /// Create a copy of ProductEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
+  @pragma('vm:prefer-inline')
   $ProductCopyWith<$Res> get product {
     return $ProductCopyWith<$Res>(_value.product, (value) {
       return _then(_value.copyWith(product: value));
@@ -450,8 +441,8 @@ class __$SaveFavoriteEventCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_SaveFavoriteEvent implements _SaveFavoriteEvent {
-  const _$_SaveFavoriteEvent(this.product);
+class _$SaveFavoriteEventImpl implements _SaveFavoriteEvent {
+  const _$SaveFavoriteEventImpl(this.product);
 
   @override
   final Product product;
@@ -462,21 +453,24 @@ class _$_SaveFavoriteEvent implements _SaveFavoriteEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SaveFavoriteEvent &&
-            const DeepCollectionEquality().equals(other.product, product));
+            other is _$SaveFavoriteEventImpl &&
+            (identical(other.product, product) || other.product == product));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(product));
+  int get hashCode => Object.hash(runtimeType, product);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ProductEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  _$SaveFavoriteEventCopyWith<_SaveFavoriteEvent> get copyWith =>
-      __$SaveFavoriteEventCopyWithImpl<_SaveFavoriteEvent>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$SaveFavoriteEventImplCopyWith<_$SaveFavoriteEventImpl> get copyWith =>
+      __$$SaveFavoriteEventImplCopyWithImpl<_$SaveFavoriteEventImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -492,10 +486,10 @@ class _$_SaveFavoriteEvent implements _SaveFavoriteEvent {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(int limit)? fetchProduct,
-    TResult Function(int limit)? loadMore,
-    TResult Function(Product product)? saveFavorite,
-    TResult Function(Product product)? deleteFavorite,
+    TResult? Function(int limit)? fetchProduct,
+    TResult? Function(int limit)? loadMore,
+    TResult? Function(Product product)? saveFavorite,
+    TResult? Function(Product product)? deleteFavorite,
   }) {
     return saveFavorite?.call(product);
   }
@@ -529,10 +523,10 @@ class _$_SaveFavoriteEvent implements _SaveFavoriteEvent {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_FetchProductsEvent value)? fetchProduct,
-    TResult Function(_LoadMoreEvent value)? loadMore,
-    TResult Function(_SaveFavoriteEvent value)? saveFavorite,
-    TResult Function(_DeleteFavoriteEvent value)? deleteFavorite,
+    TResult? Function(_FetchProductsEvent value)? fetchProduct,
+    TResult? Function(_LoadMoreEvent value)? loadMore,
+    TResult? Function(_SaveFavoriteEvent value)? saveFavorite,
+    TResult? Function(_DeleteFavoriteEvent value)? deleteFavorite,
   }) {
     return saveFavorite?.call(this);
   }
@@ -554,48 +548,56 @@ class _$_SaveFavoriteEvent implements _SaveFavoriteEvent {
 }
 
 abstract class _SaveFavoriteEvent implements ProductEvent {
-  const factory _SaveFavoriteEvent(Product product) = _$_SaveFavoriteEvent;
+  const factory _SaveFavoriteEvent(final Product product) =
+      _$SaveFavoriteEventImpl;
 
   Product get product;
-  @JsonKey(ignore: true)
-  _$SaveFavoriteEventCopyWith<_SaveFavoriteEvent> get copyWith =>
+
+  /// Create a copy of ProductEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SaveFavoriteEventImplCopyWith<_$SaveFavoriteEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$DeleteFavoriteEventCopyWith<$Res> {
-  factory _$DeleteFavoriteEventCopyWith(_DeleteFavoriteEvent value,
-          $Res Function(_DeleteFavoriteEvent) then) =
-      __$DeleteFavoriteEventCopyWithImpl<$Res>;
+abstract class _$$DeleteFavoriteEventImplCopyWith<$Res> {
+  factory _$$DeleteFavoriteEventImplCopyWith(_$DeleteFavoriteEventImpl value,
+          $Res Function(_$DeleteFavoriteEventImpl) then) =
+      __$$DeleteFavoriteEventImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({Product product});
 
   $ProductCopyWith<$Res> get product;
 }
 
 /// @nodoc
-class __$DeleteFavoriteEventCopyWithImpl<$Res>
-    extends _$ProductEventCopyWithImpl<$Res>
-    implements _$DeleteFavoriteEventCopyWith<$Res> {
-  __$DeleteFavoriteEventCopyWithImpl(
-      _DeleteFavoriteEvent _value, $Res Function(_DeleteFavoriteEvent) _then)
-      : super(_value, (v) => _then(v as _DeleteFavoriteEvent));
+class __$$DeleteFavoriteEventImplCopyWithImpl<$Res>
+    extends _$ProductEventCopyWithImpl<$Res, _$DeleteFavoriteEventImpl>
+    implements _$$DeleteFavoriteEventImplCopyWith<$Res> {
+  __$$DeleteFavoriteEventImplCopyWithImpl(_$DeleteFavoriteEventImpl _value,
+      $Res Function(_$DeleteFavoriteEventImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _DeleteFavoriteEvent get _value => super._value as _DeleteFavoriteEvent;
-
+  /// Create a copy of ProductEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? product = freezed,
+    Object? product = null,
   }) {
-    return _then(_DeleteFavoriteEvent(
-      product == freezed
+    return _then(_$DeleteFavoriteEventImpl(
+      null == product
           ? _value.product
           : product // ignore: cast_nullable_to_non_nullable
               as Product,
     ));
   }
 
+  /// Create a copy of ProductEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
+  @pragma('vm:prefer-inline')
   $ProductCopyWith<$Res> get product {
     return $ProductCopyWith<$Res>(_value.product, (value) {
       return _then(_value.copyWith(product: value));
@@ -605,8 +607,8 @@ class __$DeleteFavoriteEventCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_DeleteFavoriteEvent implements _DeleteFavoriteEvent {
-  const _$_DeleteFavoriteEvent(this.product);
+class _$DeleteFavoriteEventImpl implements _DeleteFavoriteEvent {
+  const _$DeleteFavoriteEventImpl(this.product);
 
   @override
   final Product product;
@@ -617,21 +619,23 @@ class _$_DeleteFavoriteEvent implements _DeleteFavoriteEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _DeleteFavoriteEvent &&
-            const DeepCollectionEquality().equals(other.product, product));
+            other is _$DeleteFavoriteEventImpl &&
+            (identical(other.product, product) || other.product == product));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(product));
+  int get hashCode => Object.hash(runtimeType, product);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ProductEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  _$DeleteFavoriteEventCopyWith<_DeleteFavoriteEvent> get copyWith =>
-      __$DeleteFavoriteEventCopyWithImpl<_DeleteFavoriteEvent>(
+  @pragma('vm:prefer-inline')
+  _$$DeleteFavoriteEventImplCopyWith<_$DeleteFavoriteEventImpl> get copyWith =>
+      __$$DeleteFavoriteEventImplCopyWithImpl<_$DeleteFavoriteEventImpl>(
           this, _$identity);
 
   @override
@@ -648,10 +652,10 @@ class _$_DeleteFavoriteEvent implements _DeleteFavoriteEvent {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(int limit)? fetchProduct,
-    TResult Function(int limit)? loadMore,
-    TResult Function(Product product)? saveFavorite,
-    TResult Function(Product product)? deleteFavorite,
+    TResult? Function(int limit)? fetchProduct,
+    TResult? Function(int limit)? loadMore,
+    TResult? Function(Product product)? saveFavorite,
+    TResult? Function(Product product)? deleteFavorite,
   }) {
     return deleteFavorite?.call(product);
   }
@@ -685,10 +689,10 @@ class _$_DeleteFavoriteEvent implements _DeleteFavoriteEvent {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_FetchProductsEvent value)? fetchProduct,
-    TResult Function(_LoadMoreEvent value)? loadMore,
-    TResult Function(_SaveFavoriteEvent value)? saveFavorite,
-    TResult Function(_DeleteFavoriteEvent value)? deleteFavorite,
+    TResult? Function(_FetchProductsEvent value)? fetchProduct,
+    TResult? Function(_LoadMoreEvent value)? loadMore,
+    TResult? Function(_SaveFavoriteEvent value)? saveFavorite,
+    TResult? Function(_DeleteFavoriteEvent value)? deleteFavorite,
   }) {
     return deleteFavorite?.call(this);
   }
@@ -710,34 +714,17 @@ class _$_DeleteFavoriteEvent implements _DeleteFavoriteEvent {
 }
 
 abstract class _DeleteFavoriteEvent implements ProductEvent {
-  const factory _DeleteFavoriteEvent(Product product) = _$_DeleteFavoriteEvent;
+  const factory _DeleteFavoriteEvent(final Product product) =
+      _$DeleteFavoriteEventImpl;
 
   Product get product;
-  @JsonKey(ignore: true)
-  _$DeleteFavoriteEventCopyWith<_DeleteFavoriteEvent> get copyWith =>
+
+  /// Create a copy of ProductEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$DeleteFavoriteEventImplCopyWith<_$DeleteFavoriteEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
-
-/// @nodoc
-class _$ProductStateTearOff {
-  const _$ProductStateTearOff();
-
-  _ProductState call(
-      {required Option<Either<Failure, DataProduct>> productOrFailureOption,
-      required bool isLoading,
-      required bool isLoadMore,
-      required Option<Either<String, String>> successOrFailureMessage}) {
-    return _ProductState(
-      productOrFailureOption: productOrFailureOption,
-      isLoading: isLoading,
-      isLoadMore: isLoadMore,
-      successOrFailureMessage: successOrFailureMessage,
-    );
-  }
-}
-
-/// @nodoc
-const $ProductState = _$ProductStateTearOff();
 
 /// @nodoc
 mixin _$ProductState {
@@ -748,7 +735,9 @@ mixin _$ProductState {
   Option<Either<String, String>> get successOrFailureMessage =>
       throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ProductState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ProductStateCopyWith<ProductState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -757,7 +746,8 @@ mixin _$ProductState {
 abstract class $ProductStateCopyWith<$Res> {
   factory $ProductStateCopyWith(
           ProductState value, $Res Function(ProductState) then) =
-      _$ProductStateCopyWithImpl<$Res>;
+      _$ProductStateCopyWithImpl<$Res, ProductState>;
+  @useResult
   $Res call(
       {Option<Either<Failure, DataProduct>> productOrFailureOption,
       bool isLoading,
@@ -766,48 +756,54 @@ abstract class $ProductStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ProductStateCopyWithImpl<$Res> implements $ProductStateCopyWith<$Res> {
+class _$ProductStateCopyWithImpl<$Res, $Val extends ProductState>
+    implements $ProductStateCopyWith<$Res> {
   _$ProductStateCopyWithImpl(this._value, this._then);
 
-  final ProductState _value;
   // ignore: unused_field
-  final $Res Function(ProductState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  /// Create a copy of ProductState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? productOrFailureOption = freezed,
-    Object? isLoading = freezed,
-    Object? isLoadMore = freezed,
-    Object? successOrFailureMessage = freezed,
+    Object? productOrFailureOption = null,
+    Object? isLoading = null,
+    Object? isLoadMore = null,
+    Object? successOrFailureMessage = null,
   }) {
     return _then(_value.copyWith(
-      productOrFailureOption: productOrFailureOption == freezed
+      productOrFailureOption: null == productOrFailureOption
           ? _value.productOrFailureOption
           : productOrFailureOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<Failure, DataProduct>>,
-      isLoading: isLoading == freezed
+      isLoading: null == isLoading
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
-      isLoadMore: isLoadMore == freezed
+      isLoadMore: null == isLoadMore
           ? _value.isLoadMore
           : isLoadMore // ignore: cast_nullable_to_non_nullable
               as bool,
-      successOrFailureMessage: successOrFailureMessage == freezed
+      successOrFailureMessage: null == successOrFailureMessage
           ? _value.successOrFailureMessage
           : successOrFailureMessage // ignore: cast_nullable_to_non_nullable
               as Option<Either<String, String>>,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$ProductStateCopyWith<$Res>
+abstract class _$$ProductStateImplCopyWith<$Res>
     implements $ProductStateCopyWith<$Res> {
-  factory _$ProductStateCopyWith(
-          _ProductState value, $Res Function(_ProductState) then) =
-      __$ProductStateCopyWithImpl<$Res>;
+  factory _$$ProductStateImplCopyWith(
+          _$ProductStateImpl value, $Res Function(_$ProductStateImpl) then) =
+      __$$ProductStateImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Option<Either<Failure, DataProduct>> productOrFailureOption,
       bool isLoading,
@@ -816,36 +812,37 @@ abstract class _$ProductStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ProductStateCopyWithImpl<$Res> extends _$ProductStateCopyWithImpl<$Res>
-    implements _$ProductStateCopyWith<$Res> {
-  __$ProductStateCopyWithImpl(
-      _ProductState _value, $Res Function(_ProductState) _then)
-      : super(_value, (v) => _then(v as _ProductState));
+class __$$ProductStateImplCopyWithImpl<$Res>
+    extends _$ProductStateCopyWithImpl<$Res, _$ProductStateImpl>
+    implements _$$ProductStateImplCopyWith<$Res> {
+  __$$ProductStateImplCopyWithImpl(
+      _$ProductStateImpl _value, $Res Function(_$ProductStateImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _ProductState get _value => super._value as _ProductState;
-
+  /// Create a copy of ProductState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? productOrFailureOption = freezed,
-    Object? isLoading = freezed,
-    Object? isLoadMore = freezed,
-    Object? successOrFailureMessage = freezed,
+    Object? productOrFailureOption = null,
+    Object? isLoading = null,
+    Object? isLoadMore = null,
+    Object? successOrFailureMessage = null,
   }) {
-    return _then(_ProductState(
-      productOrFailureOption: productOrFailureOption == freezed
+    return _then(_$ProductStateImpl(
+      productOrFailureOption: null == productOrFailureOption
           ? _value.productOrFailureOption
           : productOrFailureOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<Failure, DataProduct>>,
-      isLoading: isLoading == freezed
+      isLoading: null == isLoading
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
-      isLoadMore: isLoadMore == freezed
+      isLoadMore: null == isLoadMore
           ? _value.isLoadMore
           : isLoadMore // ignore: cast_nullable_to_non_nullable
               as bool,
-      successOrFailureMessage: successOrFailureMessage == freezed
+      successOrFailureMessage: null == successOrFailureMessage
           ? _value.successOrFailureMessage
           : successOrFailureMessage // ignore: cast_nullable_to_non_nullable
               as Option<Either<String, String>>,
@@ -855,8 +852,8 @@ class __$ProductStateCopyWithImpl<$Res> extends _$ProductStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ProductState implements _ProductState {
-  const _$_ProductState(
+class _$ProductStateImpl implements _ProductState {
+  const _$ProductStateImpl(
       {required this.productOrFailureOption,
       required this.isLoading,
       required this.isLoadMore,
@@ -877,40 +874,42 @@ class _$_ProductState implements _ProductState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ProductState &&
-            const DeepCollectionEquality()
-                .equals(other.productOrFailureOption, productOrFailureOption) &&
-            const DeepCollectionEquality().equals(other.isLoading, isLoading) &&
-            const DeepCollectionEquality()
-                .equals(other.isLoadMore, isLoadMore) &&
-            const DeepCollectionEquality().equals(
-                other.successOrFailureMessage, successOrFailureMessage));
+            other is _$ProductStateImpl &&
+            (identical(other.productOrFailureOption, productOrFailureOption) ||
+                other.productOrFailureOption == productOrFailureOption) &&
+            (identical(other.isLoading, isLoading) ||
+                other.isLoading == isLoading) &&
+            (identical(other.isLoadMore, isLoadMore) ||
+                other.isLoadMore == isLoadMore) &&
+            (identical(
+                    other.successOrFailureMessage, successOrFailureMessage) ||
+                other.successOrFailureMessage == successOrFailureMessage));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(productOrFailureOption),
-      const DeepCollectionEquality().hash(isLoading),
-      const DeepCollectionEquality().hash(isLoadMore),
-      const DeepCollectionEquality().hash(successOrFailureMessage));
+  int get hashCode => Object.hash(runtimeType, productOrFailureOption,
+      isLoading, isLoadMore, successOrFailureMessage);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ProductState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  _$ProductStateCopyWith<_ProductState> get copyWith =>
-      __$ProductStateCopyWithImpl<_ProductState>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ProductStateImplCopyWith<_$ProductStateImpl> get copyWith =>
+      __$$ProductStateImplCopyWithImpl<_$ProductStateImpl>(this, _$identity);
 }
 
 abstract class _ProductState implements ProductState {
   const factory _ProductState(
-          {required Option<Either<Failure, DataProduct>> productOrFailureOption,
-          required bool isLoading,
-          required bool isLoadMore,
-          required Option<Either<String, String>> successOrFailureMessage}) =
-      _$_ProductState;
+      {required final Option<Either<Failure, DataProduct>>
+          productOrFailureOption,
+      required final bool isLoading,
+      required final bool isLoadMore,
+      required final Option<Either<String, String>>
+          successOrFailureMessage}) = _$ProductStateImpl;
 
   @override
   Option<Either<Failure, DataProduct>> get productOrFailureOption;
@@ -920,8 +919,11 @@ abstract class _ProductState implements ProductState {
   bool get isLoadMore;
   @override
   Option<Either<String, String>> get successOrFailureMessage;
+
+  /// Create a copy of ProductState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$ProductStateCopyWith<_ProductState> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ProductStateImplCopyWith<_$ProductStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

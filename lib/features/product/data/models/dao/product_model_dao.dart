@@ -3,7 +3,7 @@ import 'package:floor/floor.dart';
 @Entity(
   tableName: 'product',
   indices: [
-    Index(value: ['productId'], unique: true)
+    Index(value: ['productId'], unique: true),
   ],
 )
 class ProductModelDao {

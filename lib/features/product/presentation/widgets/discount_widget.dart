@@ -35,7 +35,7 @@ class DiscountWidget extends StatelessWidget {
                   fontWeight: FontWeight.w700,
                   fontSize: 8,
                 ),
-              )
+              ),
             ],
           ),
         ),

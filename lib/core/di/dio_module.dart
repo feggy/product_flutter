@@ -2,7 +2,6 @@
 
 import 'dart:developer';
 
-import 'package:dio/adapter.dart';
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 import 'package:test_lime_commerce/core/config/build_config.dart';
@@ -13,9 +12,6 @@ class DioModule with DioMixin implements Dio {
   DioModule() {
     final newOptions = BaseOptions(
       contentType: 'application/json',
-      connectTimeout: 120000,
-      sendTimeout: 120000,
-      receiveTimeout: 120001,
       baseUrl: BuildConfig.baseUrl,
       // headers: <String, String>{
       //   'x-rapidapi-key': EnvConfig.RAPID_API_KEY,
@@ -26,7 +22,7 @@ class DioModule with DioMixin implements Dio {
     options = newOptions;
     interceptors.add(LoggerInterceptor());
 
-    httpClientAdapter = DefaultHttpClientAdapter();
+    httpClientAdapter = HttpClientAdapter();
   }
 }
 
@@ -39,7 +35,7 @@ class LoggerInterceptor extends Interceptor {
   }
 
   @override
-  void onError(DioError err, ErrorInterceptorHandler handler) {
+  void onError(DioException err, ErrorInterceptorHandler handler) {
     log('\nERROR_RESPONSE[${err.response?.statusCode}] => PATH: ${err.requestOptions.path}\nRESPONSE:\n${err.response?.data}');
     super.onError(err, handler);
   }
